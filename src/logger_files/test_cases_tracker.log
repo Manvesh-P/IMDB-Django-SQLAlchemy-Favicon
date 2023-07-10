@@ -1,0 +1,186 @@
+     14532         20       INFO test_get_director_with_max_number_of_movies           MainThread   01:55:29 432.0218563079834 test-1 started
+     14532         10      DEBUG  _new_conn           MainThread   01:55:29 433.4890842437744 Starting new HTTP connection (1): 127.0.0.1:8000
+     14532         10      DEBUG _make_request           MainThread   01:55:29 440.25230407714844 http://127.0.0.1:8000 "GET /get/director/with/max/number/of/movies/ HTTP/1.1" 200 241
+     14532         20       INFO test_get_director_with_max_number_of_movies           MainThread   01:55:29 440.6747817993164 test-1 ended
+     10218         20       INFO test_get_director_with_max_number_of_movies           MainThread   13:39:50 437.7613067626953 test-1 started
+     10218         10      DEBUG  _new_conn           MainThread   13:39:50 459.8259925842285 Starting new HTTP connection (1): 127.0.0.1:8000
+     10218         10      DEBUG _make_request           MainThread   13:39:50 490.2825355529785 http://127.0.0.1:8000 "GET /get/director/with/max/number/of/movies/ HTTP/1.1" 200 251
+     10218         20       INFO test_get_director_with_max_number_of_movies           MainThread   13:39:50 491.23549461364746 test-1 ended
+     10218         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   13:39:50 491.4529323577881 test-2 started
+     10218         10      DEBUG  _new_conn           MainThread   13:39:50 492.68269538879395 Starting new HTTP connection (1): 127.0.0.1:8000
+     10218         10      DEBUG _make_request           MainThread   13:39:50 499.81212615966797 http://127.0.0.1:8000 "GET /get/top/ten/movies/based/on/imdb_score/ HTTP/1.1" 200 492
+     10273         20       INFO test_get_director_with_max_number_of_movies           MainThread   13:40:24 387.76421546936035 test-1 started
+     10273         10      DEBUG  _new_conn           MainThread   13:40:24 389.0969753265381 Starting new HTTP connection (1): 127.0.0.1:8000
+     10273         10      DEBUG _make_request           MainThread   13:40:24 410.7098579406738 http://127.0.0.1:8000 "GET /get/director/with/max/number/of/movies/ HTTP/1.1" 200 251
+     10273         20       INFO test_get_director_with_max_number_of_movies           MainThread   13:40:24 411.2260341644287 test-1 ended
+     10273         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   13:40:24 411.3905429840088 test-2 started
+     10273         10      DEBUG  _new_conn           MainThread   13:40:24 412.35971450805664 Starting new HTTP connection (1): 127.0.0.1:8000
+     10273         10      DEBUG _make_request           MainThread   13:40:24 418.7476634979248 http://127.0.0.1:8000 "GET /get/top/ten/movies/based/on/imdb_score/ HTTP/1.1" 200 492
+     10273         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   13:40:24 419.15249824523926 test-2 ended
+     15716         20       INFO test_get_director_with_max_number_of_movies           MainThread   16:30:34 457.195520401001 test-1 started
+     15716         10      DEBUG  _new_conn           MainThread   16:30:34 458.5251808166504 Starting new HTTP connection (1): 127.0.0.1:8000
+     15716         10      DEBUG _make_request           MainThread   16:30:34 480.8349609375 http://127.0.0.1:8000 "GET /get/director/with/max/number/of/movies/ HTTP/1.1" 200 251
+     15716         20       INFO test_get_director_with_max_number_of_movies           MainThread   16:30:34 481.3239574432373 test-1 ended
+     15716         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   16:30:34 481.6756248474121 test-3 started
+     15716         10      DEBUG  _new_conn           MainThread   16:30:34 482.5413227081299 Starting new HTTP connection (1): 127.0.0.1:8000
+     15716         10      DEBUG _make_request           MainThread   16:30:34 490.5674457550049 http://127.0.0.1:8000 "GET /get/least/watched/movie/based/on/imdb_score/ HTTP/1.1" 200 255
+     15716         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   16:30:34 491.0848140716553 test-3 ended
+     15716         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   16:30:34 491.2295341491699 test-2 started
+     15716         10      DEBUG  _new_conn           MainThread   16:30:34 492.4736022949219 Starting new HTTP connection (1): 127.0.0.1:8000
+     15716         10      DEBUG _make_request           MainThread   16:30:34 499.58300590515137 http://127.0.0.1:8000 "GET /get/top/ten/movies/based/on/imdb_score/ HTTP/1.1" 200 492
+     15716         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   16:30:34 500.1077651977539 test-2 ended
+      7679         20       INFO test_get_director_with_max_number_of_movies           MainThread   03:09:13 663.5651588439941 test-1 started
+      7679         10      DEBUG  _new_conn           MainThread   03:09:13 675.6894588470459 Starting new HTTP connection (1): 127.0.0.1:8000
+      7679         10      DEBUG _make_request           MainThread   03:09:13 724.2691516876221 http://127.0.0.1:8000 "GET /get/director/with/max/number/of/movies/ HTTP/1.1" 200 251
+      7679         20       INFO test_get_director_with_max_number_of_movies           MainThread   03:09:13 724.7583866119385 test-1 ended
+      7679         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   03:09:13 724.8964309692383 test-3 started
+      7679         10      DEBUG  _new_conn           MainThread   03:09:13 725.9063720703125 Starting new HTTP connection (1): 127.0.0.1:8000
+      7679         10      DEBUG _make_request           MainThread   03:09:13 732.302188873291 http://127.0.0.1:8000 "GET /get/least/watched/movie/based/on/imdb_score/ HTTP/1.1" 200 255
+      7679         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   03:09:13 732.7370643615723 test-3 ended
+      7679         20       INFO test_get_most_watched_genre           MainThread   03:09:13 732.8922748565674 test-4 started
+      7679         10      DEBUG  _new_conn           MainThread   03:09:13 733.7131500244141 Starting new HTTP connection (1): 127.0.0.1:8000
+      7679         10      DEBUG _make_request           MainThread   03:09:13 775.205135345459 http://127.0.0.1:8000 "GET /get/most/wayched/genre/ HTTP/1.1" 404 2927
+      7679         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   03:09:13 776.3164043426514 test-2 started
+      7679         10      DEBUG  _new_conn           MainThread   03:09:13 777.8222560882568 Starting new HTTP connection (1): 127.0.0.1:8000
+      7679         10      DEBUG _make_request           MainThread   03:09:13 787.7256870269775 http://127.0.0.1:8000 "GET /get/top/ten/movies/based/on/imdb_score/ HTTP/1.1" 200 492
+      7679         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   03:09:13 788.1245613098145 test-2 ended
+      7734         20       INFO test_get_director_with_max_number_of_movies           MainThread   03:10:10 578.2828330993652 test-1 started
+      7734         10      DEBUG  _new_conn           MainThread   03:10:10 579.5984268188477 Starting new HTTP connection (1): 127.0.0.1:8000
+      7734         10      DEBUG _make_request           MainThread   03:10:10 602.2017002105713 http://127.0.0.1:8000 "GET /get/director/with/max/number/of/movies/ HTTP/1.1" 200 251
+      7734         20       INFO test_get_director_with_max_number_of_movies           MainThread   03:10:10 602.7238368988037 test-1 ended
+      7734         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   03:10:10 602.9412746429443 test-3 started
+      7734         10      DEBUG  _new_conn           MainThread   03:10:10 603.907585144043 Starting new HTTP connection (1): 127.0.0.1:8000
+      7734         10      DEBUG _make_request           MainThread   03:10:10 611.6223335266113 http://127.0.0.1:8000 "GET /get/least/watched/movie/based/on/imdb_score/ HTTP/1.1" 200 255
+      7734         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   03:10:10 612.0915412902832 test-3 ended
+      7734         20       INFO test_get_most_watched_genre           MainThread   03:10:10 612.2407913208008 test-4 started
+      7734         10      DEBUG  _new_conn           MainThread   03:10:10 613.1114959716797 Starting new HTTP connection (1): 127.0.0.1:8000
+      7734         10      DEBUG _make_request           MainThread   03:10:10 620.316743850708 http://127.0.0.1:8000 "GET /get/most/watched/genre/ HTTP/1.1" 200 228
+      7734         20       INFO test_get_most_watched_genre           MainThread   03:10:10 620.903730392456 test-4 ended
+      7734         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   03:10:10 621.1090087890625 test-2 started
+      7734         10      DEBUG  _new_conn           MainThread   03:10:10 622.0870018005371 Starting new HTTP connection (1): 127.0.0.1:8000
+      7734         10      DEBUG _make_request           MainThread   03:10:10 629.0030479431152 http://127.0.0.1:8000 "GET /get/top/ten/movies/based/on/imdb_score/ HTTP/1.1" 200 492
+      7734         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   03:10:10 629.3814182281494 test-2 ended
+      7742         20       INFO test_get_director_with_max_number_of_movies           MainThread   03:10:14 887.2702121734619 test-1 started
+      7742         10      DEBUG  _new_conn           MainThread   03:10:14 888.6148929595947 Starting new HTTP connection (1): 127.0.0.1:8000
+      7742         10      DEBUG _make_request           MainThread   03:10:14 912.0995998382568 http://127.0.0.1:8000 "GET /get/director/with/max/number/of/movies/ HTTP/1.1" 200 251
+      7742         20       INFO test_get_director_with_max_number_of_movies           MainThread   03:10:14 912.5592708587646 test-1 ended
+      7742         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   03:10:14 912.7137660980225 test-3 started
+      7742         10      DEBUG  _new_conn           MainThread   03:10:14 913.6307239532471 Starting new HTTP connection (1): 127.0.0.1:8000
+      7742         10      DEBUG _make_request           MainThread   03:10:14 920.0625419616699 http://127.0.0.1:8000 "GET /get/least/watched/movie/based/on/imdb_score/ HTTP/1.1" 200 255
+      7742         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   03:10:14 920.4981327056885 test-3 ended
+      7742         20       INFO test_get_most_watched_genre           MainThread   03:10:14 920.6352233886719 test-4 started
+      7742         10      DEBUG  _new_conn           MainThread   03:10:14 921.4062690734863 Starting new HTTP connection (1): 127.0.0.1:8000
+      7742         10      DEBUG _make_request           MainThread   03:10:14 928.2398223876953 http://127.0.0.1:8000 "GET /get/most/watched/genre/ HTTP/1.1" 200 228
+      7742         20       INFO test_get_most_watched_genre           MainThread   03:10:14 928.7142753601074 test-4 ended
+      7742         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   03:10:14 928.8816452026367 test-2 started
+      7742         10      DEBUG  _new_conn           MainThread   03:10:14 929.7351837158203 Starting new HTTP connection (1): 127.0.0.1:8000
+      7742         10      DEBUG _make_request           MainThread   03:10:14 935.7695579528809 http://127.0.0.1:8000 "GET /get/top/ten/movies/based/on/imdb_score/ HTTP/1.1" 200 492
+      7742         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   03:10:14 936.1646175384521 test-2 ended
+      7540         20       INFO test_get_director_with_max_number_of_movies           MainThread   13:54:25 463.69314193725586 test-1 started
+      7540         10      DEBUG  _new_conn           MainThread   13:54:25 519.5646286010742 Starting new HTTP connection (1): 127.0.0.1:8000
+      7540         10      DEBUG _make_request           MainThread   13:54:25 552.9942512512207 http://127.0.0.1:8000 "GET /get/director/with/max/number/of/movies/ HTTP/1.1" 200 251
+      7540         20       INFO test_get_director_with_max_number_of_movies           MainThread   13:54:25 553.6251068115234 test-1 ended
+      7540         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   13:54:25 553.8866519927979 test-3 started
+      7540         10      DEBUG  _new_conn           MainThread   13:54:25 554.9411773681641 Starting new HTTP connection (1): 127.0.0.1:8000
+      7540         10      DEBUG _make_request           MainThread   13:54:25 563.6551380157471 http://127.0.0.1:8000 "GET /get/least/watched/movie/based/on/imdb_score/ HTTP/1.1" 200 255
+      7540         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   13:54:25 564.3069744110107 test-3 ended
+      7540         20       INFO test_get_most_watched_genre           MainThread   13:54:25 564.4373893737793 test-4 started
+      7540         10      DEBUG  _new_conn           MainThread   13:54:25 565.4439926147461 Starting new HTTP connection (1): 127.0.0.1:8000
+      7540         10      DEBUG _make_request           MainThread   13:54:25 769.0198421478271 http://127.0.0.1:8000 "GET /get/most/watched/genre/ HTTP/1.1" 200 228
+      7540         20       INFO test_get_most_watched_genre           MainThread   13:54:25 769.6049213409424 test-4 ended
+      7540         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   13:54:25 769.7560787200928 test-2 started
+      7540         10      DEBUG  _new_conn           MainThread   13:54:25 770.7810401916504 Starting new HTTP connection (1): 127.0.0.1:8000
+      7540         10      DEBUG _make_request           MainThread   13:54:25 779.6626091003418 http://127.0.0.1:8000 "GET /get/top/ten/movies/based/on/imdb_score/ HTTP/1.1" 200 492
+      7540         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   13:54:25 780.627965927124 test-2 ended
+      8973         20       INFO test_get_director_with_max_number_of_movies           MainThread   14:42:14 545.4180240631104 test-1 started
+      8973         10      DEBUG  _new_conn           MainThread   14:42:14 546.8835830688477 Starting new HTTP connection (1): 127.0.0.1:8000
+      8973         10      DEBUG _make_request           MainThread   14:42:14 575.4907131195068 http://127.0.0.1:8000 "GET /get/director/with/max/number/of/movies/ HTTP/1.1" 200 251
+      8973         20       INFO test_get_director_with_max_number_of_movies           MainThread   14:42:14 576.2395858764648 test-1 ended
+      8973         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   14:42:14 576.4796733856201 test-3 started
+      8973         10      DEBUG  _new_conn           MainThread   14:42:14 577.8017044067383 Starting new HTTP connection (1): 127.0.0.1:8000
+      8973         10      DEBUG _make_request           MainThread   14:42:14 587.5744819641113 http://127.0.0.1:8000 "GET /get/least/watched/movie/based/on/imdb_score/ HTTP/1.1" 200 255
+      8973         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   14:42:14 588.1824493408203 test-3 ended
+      8973         20       INFO test_get_most_watched_genre           MainThread   14:42:14 588.3738994598389 test-4 started
+      8973         10      DEBUG  _new_conn           MainThread   14:42:14 589.6267890930176 Starting new HTTP connection (1): 127.0.0.1:8000
+      8973         10      DEBUG _make_request           MainThread   14:42:14 786.2715721130371 http://127.0.0.1:8000 "GET /get/most/watched/genre/ HTTP/1.1" 200 228
+      8973         20       INFO test_get_most_watched_genre           MainThread   14:42:14 786.8797779083252 test-4 ended
+      8973         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   14:42:14 787.0995998382568 test-2 started
+      8973         10      DEBUG  _new_conn           MainThread   14:42:14 788.3481979370117 Starting new HTTP connection (1): 127.0.0.1:8000
+      8973         10      DEBUG _make_request           MainThread   14:42:14 816.4739608764648 http://127.0.0.1:8000 "GET /get/top/ten/movies/based/on/imdb_score/ HTTP/1.1" 200 492
+      8973         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   14:42:14 816.9779777526855 test-2 ended
+     19337         20       INFO test_get_director_with_max_number_of_movies           MainThread   20:13:23 502.56848335266113 test-1 started
+     19337         10      DEBUG  _new_conn           MainThread   20:13:23 503.892183303833 Starting new HTTP connection (1): 127.0.0.1:8000
+     19337         10      DEBUG _make_request           MainThread   20:13:23 528.1598567962646 http://127.0.0.1:8000 "GET /get/director/with/max/number/of/movies/ HTTP/1.1" 200 251
+     19337         20       INFO test_get_director_with_max_number_of_movies           MainThread   20:13:23 528.6905765533447 test-1 ended
+     19337         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   20:13:23 528.8257598876953 test-3 started
+     19337         10      DEBUG  _new_conn           MainThread   20:13:23 529.670000076294 Starting new HTTP connection (1): 127.0.0.1:8000
+     19337         10      DEBUG _make_request           MainThread   20:13:23 553.9247989654541 http://127.0.0.1:8000 "GET /get/least/watched/movie/based/on/imdb_score/ HTTP/1.1" 200 255
+     19337         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   20:13:23 554.279088973999 test-3 ended
+     19337         20       INFO test_get_most_popular_director_in_first_hundread_movies           MainThread   20:13:23 554.4922351837158 test-5 started
+     19337         20       INFO test_get_most_watched_genre           MainThread   20:13:23 554.7528266906738 test-4 started
+     19337         10      DEBUG  _new_conn           MainThread   20:13:23 555.5171966552734 Starting new HTTP connection (1): 127.0.0.1:8000
+     19337         10      DEBUG _make_request           MainThread   20:13:23 734.7977161407471 http://127.0.0.1:8000 "GET /get/most/watched/genre/ HTTP/1.1" 200 228
+     19337         20       INFO test_get_most_watched_genre           MainThread   20:13:23 735.253095626831 test-4 ended
+     19337         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   20:13:23 735.396146774292 test-2 started
+     19337         10      DEBUG  _new_conn           MainThread   20:13:23 736.159086227417 Starting new HTTP connection (1): 127.0.0.1:8000
+     19337         10      DEBUG _make_request           MainThread   20:13:23 758.580207824707 http://127.0.0.1:8000 "GET /get/top/ten/movies/based/on/imdb_score/ HTTP/1.1" 200 492
+     19337         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   20:13:23 758.9647769927979 test-2 ended
+     19360         20       INFO test_get_director_with_max_number_of_movies           MainThread   20:13:35 274.0187644958496 test-1 started
+     19360         10      DEBUG  _new_conn           MainThread   20:13:35 275.280237197876 Starting new HTTP connection (1): 127.0.0.1:8000
+     19360         10      DEBUG _make_request           MainThread   20:13:35 299.1621494293213 http://127.0.0.1:8000 "GET /get/director/with/max/number/of/movies/ HTTP/1.1" 200 251
+     19360         20       INFO test_get_director_with_max_number_of_movies           MainThread   20:13:35 299.6668815612793 test-1 ended
+     19360         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   20:13:35 299.82972145080566 test-3 started
+     19360         10      DEBUG  _new_conn           MainThread   20:13:35 300.6570339202881 Starting new HTTP connection (1): 127.0.0.1:8000
+     19360         10      DEBUG _make_request           MainThread   20:13:35 323.6653804779053 http://127.0.0.1:8000 "GET /get/least/watched/movie/based/on/imdb_score/ HTTP/1.1" 200 255
+     19360         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   20:13:35 324.08618927001953 test-3 ended
+     19360         20       INFO test_get_most_popular_director_in_first_hundread_movies           MainThread   20:13:35 324.2816925048828 test-5 started
+     19360         10      DEBUG  _new_conn           MainThread   20:13:35 325.1159191131592 Starting new HTTP connection (1): 127.0.0.1:8000
+     19360         10      DEBUG _make_request           MainThread   20:13:35 351.72080993652344 http://127.0.0.1:8000 "GET /get/most/popular/director/in/first/hundread/movies/ HTTP/1.1" 200 257
+     19360         20       INFO test_get_most_watched_genre           MainThread   20:13:35 352.3874282836914 test-4 started
+     19360         10      DEBUG  _new_conn           MainThread   20:13:35 353.13892364501953 Starting new HTTP connection (1): 127.0.0.1:8000
+     19360         10      DEBUG _make_request           MainThread   20:13:35 533.7080955505371 http://127.0.0.1:8000 "GET /get/most/watched/genre/ HTTP/1.1" 200 228
+     19360         20       INFO test_get_most_watched_genre           MainThread   20:13:35 534.0828895568848 test-4 ended
+     19360         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   20:13:35 534.1994762420654 test-2 started
+     19360         10      DEBUG  _new_conn           MainThread   20:13:35 534.9390506744385 Starting new HTTP connection (1): 127.0.0.1:8000
+     19360         10      DEBUG _make_request           MainThread   20:13:35 559.4537258148193 http://127.0.0.1:8000 "GET /get/top/ten/movies/based/on/imdb_score/ HTTP/1.1" 200 492
+     19360         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   20:13:35 559.8750114440918 test-2 ended
+     19395         20       INFO test_get_director_with_max_number_of_movies           MainThread   20:14:03 783.421516418457 test-1 started
+     19395         10      DEBUG  _new_conn           MainThread   20:14:03 784.8215103149414 Starting new HTTP connection (1): 127.0.0.1:8000
+     19395         10      DEBUG _make_request           MainThread   20:14:03 807.4138164520264 http://127.0.0.1:8000 "GET /get/director/with/max/number/of/movies/ HTTP/1.1" 200 251
+     19395         20       INFO test_get_director_with_max_number_of_movies           MainThread   20:14:03 807.9123497009277 test-1 ended
+     19395         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   20:14:03 808.0751895904541 test-3 started
+     19395         10      DEBUG  _new_conn           MainThread   20:14:03 809.0412616729736 Starting new HTTP connection (1): 127.0.0.1:8000
+     19395         10      DEBUG _make_request           MainThread   20:14:03 832.0398330688477 http://127.0.0.1:8000 "GET /get/least/watched/movie/based/on/imdb_score/ HTTP/1.1" 200 255
+     19395         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   20:14:03 832.6020240783691 test-3 ended
+     19395         20       INFO test_get_most_popular_director_in_first_hundread_movies           MainThread   20:14:03 832.7503204345703 test-5 started
+     19395         10      DEBUG  _new_conn           MainThread   20:14:03 833.5342407226562 Starting new HTTP connection (1): 127.0.0.1:8000
+     19395         10      DEBUG _make_request           MainThread   20:14:03 858.6685657501221 http://127.0.0.1:8000 "GET /get/most/popular/director/in/first/hundread/movies/ HTTP/1.1" 200 257
+     19395         20       INFO test_get_most_popular_director_in_first_hundread_movies           MainThread   20:14:03 859.1797351837158 test-5 ended
+     19395         20       INFO test_get_most_watched_genre           MainThread   20:14:03 859.3153953552246 test-4 started
+     19395         10      DEBUG  _new_conn           MainThread   20:14:03 860.2254390716553 Starting new HTTP connection (1): 127.0.0.1:8000
+     19395         10      DEBUG _make_request           MainThread   20:14:04 39.9777889251709 http://127.0.0.1:8000 "GET /get/most/watched/genre/ HTTP/1.1" 200 228
+     19395         20       INFO test_get_most_watched_genre           MainThread   20:14:04 40.384769439697266 test-4 ended
+     19395         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   20:14:04 40.53616523742676 test-2 started
+     19395         10      DEBUG  _new_conn           MainThread   20:14:04 41.25571250915527 Starting new HTTP connection (1): 127.0.0.1:8000
+     19395         10      DEBUG _make_request           MainThread   20:14:04 63.40527534484863 http://127.0.0.1:8000 "GET /get/top/ten/movies/based/on/imdb_score/ HTTP/1.1" 200 492
+     19395         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   20:14:04 63.76957893371582 test-2 ended
+     21430         20       INFO test_get_director_with_max_number_of_movies           MainThread   21:14:06 657.285213470459 test-1 started
+     21430         10      DEBUG  _new_conn           MainThread   21:14:06 659.1587066650391 Starting new HTTP connection (1): 127.0.0.1:8000
+     21430         10      DEBUG _make_request           MainThread   21:14:06 687.0687007904053 http://127.0.0.1:8000 "GET /get/director/with/max/number/of/movies/ HTTP/1.1" 200 251
+     21430         20       INFO test_get_director_with_max_number_of_movies           MainThread   21:14:06 687.8716945648193 test-1 ended
+     21430         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   21:14:06 688.0898475646973 test-3 started
+     21430         10      DEBUG  _new_conn           MainThread   21:14:06 689.4533634185791 Starting new HTTP connection (1): 127.0.0.1:8000
+     21430         10      DEBUG _make_request           MainThread   21:14:06 720.8981513977051 http://127.0.0.1:8000 "GET /get/least/watched/movie/based/on/imdb_score/ HTTP/1.1" 200 255
+     21430         20       INFO test_get_least_watched_movie_based_on_imdb_score           MainThread   21:14:06 721.4243412017822 test-3 ended
+     21430         20       INFO test_get_most_popular_director_in_first_hundread_movies           MainThread   21:14:06 721.5666770935059 test-5 started
+     21430         10      DEBUG  _new_conn           MainThread   21:14:06 722.6264476776123 Starting new HTTP connection (1): 127.0.0.1:8000
+     21430         10      DEBUG _make_request           MainThread   21:14:06 753.2703876495361 http://127.0.0.1:8000 "GET /get/most/popular/director/in/first/hundread/movies/ HTTP/1.1" 200 258
+     21430         20       INFO test_get_most_popular_director_in_first_hundread_movies           MainThread   21:14:06 753.8032531738281 test-5 ended
+     21430         20       INFO test_get_most_watched_genre           MainThread   21:14:06 753.9792060852051 test-4 started
+     21430         10      DEBUG  _new_conn           MainThread   21:14:06 754.9490928649902 Starting new HTTP connection (1): 127.0.0.1:8000
+     21430         10      DEBUG _make_request           MainThread   21:14:06 957.7221870422363 http://127.0.0.1:8000 "GET /get/most/watched/genre/ HTTP/1.1" 200 228
+     21430         20       INFO test_get_most_watched_genre           MainThread   21:14:06 958.2486152648926 test-4 ended
+     21430         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   21:14:06 958.4007263183594 test-2 started
+     21430         10      DEBUG  _new_conn           MainThread   21:14:06 959.4316482543945 Starting new HTTP connection (1): 127.0.0.1:8000
+     21430         10      DEBUG _make_request           MainThread   21:14:06 987.9646301269531 http://127.0.0.1:8000 "GET /get/top/ten/movies/based/on/imdb_score/ HTTP/1.1" 200 492
+     21430         20       INFO test_get_top_ten_movies_based_on_imdb_score           MainThread   21:14:06 988.5833263397217 test-2 ended
