@@ -12,12 +12,17 @@ from session_maker import SessionManager
 print('session maker returned session')
 from logger_files.custom_logger import logger
 from ActualLogic import ActualLogicServer
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+from django.contrib.auth import logout
 # Create your views here.
 
 session = SessionManager().get_session()
 print('session created')
 
+
 class InsertMoviesData(APIView):
+    # @login_required
     def post(self, request):
         l = []
         try:
@@ -68,8 +73,16 @@ class InsertMoviesData(APIView):
             return render(request, 'template_1.html', {})
 
 
+# @method_decorator(login_required, name='dispatch')
+@method_decorator(login_required, name='get')
+# @method_decorator(login_required, name='get', login_url='keycloak_login')
 class GetDirectorWithMaxNumberOfMovies(APIView):
+    # @login_required
+    print('APIView ---> ', APIView)
+    @login_required
     def get(self, request):
+        # logout(request)
+        print('request ---> ', request)
         l = []
         try:
             session_obj = session()

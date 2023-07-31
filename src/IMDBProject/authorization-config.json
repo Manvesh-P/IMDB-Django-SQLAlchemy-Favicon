@@ -1,0 +1,114 @@
+{
+  "allowRemoteResourceManagement": true,
+  "policyEnforcementMode": "ENFORCING",
+  "resources": [
+    {
+      "name": "Default Resource",
+      "type": "urn:manvesh:resources:default",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "f79ad270-ecc3-4ef9-81ac-de10db66128c",
+      "uris": [
+        "/*"
+      ]
+    },
+    {
+      "name": "imdb",
+      "ownerManagedAccess": false,
+      "displayName": "",
+      "attributes": {},
+      "_id": "1ef58086-1197-4811-a672-601fab890cd1",
+      "uris": [
+        "/imdb/*"
+      ],
+      "icon_uri": ""
+    }
+  ],
+  "policies": [
+    {
+      "id": "f556caa6-acfc-4b45-8691-ad1e89dfc8ea",
+      "name": "Default Policy",
+      "description": "A policy that grants access only for users within this realm",
+      "type": "js",
+      "logic": "POSITIVE",
+      "decisionStrategy": "AFFIRMATIVE",
+      "config": {
+        "code": "// by default, grants any permission associated with this policy\n$evaluation.grant();\n"
+      }
+    },
+    {
+      "id": "8f210336-25f7-4fd5-8949-8f6b5d279037",
+      "name": "super-user-policy",
+      "description": "Allow users with super-user role",
+      "type": "role",
+      "logic": "POSITIVE",
+      "decisionStrategy": "UNANIMOUS",
+      "config": {
+        "roles": "[{\"id\":\"default-roles-myrealm\",\"required\":false},{\"id\":\"uma_authorization\",\"required\":false},{\"id\":\"offline_access\",\"required\":false}]"
+      }
+    },
+    {
+      "id": "e78a3e40-3f11-484d-b167-5c84a3cd1962",
+      "name": "Default Permission",
+      "description": "A permission that applies to the default resource type",
+      "type": "resource",
+      "logic": "POSITIVE",
+      "decisionStrategy": "UNANIMOUS",
+      "config": {
+        "defaultResourceType": "urn:manvesh:resources:default",
+        "applyPolicies": "[\"Default Policy\"]"
+      }
+    },
+    {
+      "id": "7c4cdd11-6ead-4c54-8289-75ea8a7af4fc",
+      "name": "full access",
+      "description": "Full access allowed if policy conditions meet.",
+      "type": "scope",
+      "logic": "POSITIVE",
+      "decisionStrategy": "UNANIMOUS",
+      "config": {
+        "scopes": "[\"IMDB:update\",\"IMDB:add\",\"IMDB:delete\",\"IMDB:view\"]",
+        "applyPolicies": "[\"super-user-policy\"]"
+      }
+    },
+    {
+      "id": "d4e04ba0-739c-4a8e-a5f1-3aece5e269f8",
+      "name": "read-only-access",
+      "description": "Read only access if policy condition meets",
+      "type": "scope",
+      "logic": "POSITIVE",
+      "decisionStrategy": "UNANIMOUS",
+      "config": {
+        "scopes": "[\"IMDB:add\"]",
+        "applyPolicies": "[\"Default Policy\"]"
+      }
+    }
+  ],
+  "scopes": [
+    {
+      "id": "a9c45183-0a2d-4526-936d-46594f6de47d",
+      "name": "IMDB:add",
+      "iconUri": "",
+      "displayName": "IMDB add"
+    },
+    {
+      "id": "c0e9c583-780a-401e-af5f-2c31601e1db2",
+      "name": "IMDB:delete",
+      "iconUri": "",
+      "displayName": "IMDB delete"
+    },
+    {
+      "id": "29678d5c-ce0f-47a9-b61a-639a4e1a7e6c",
+      "name": "IMDB:update",
+      "iconUri": "",
+      "displayName": "IMDB update"
+    },
+    {
+      "id": "e2de3b00-63ba-440c-a178-7d06f92c0246",
+      "name": "IMDB:view",
+      "iconUri": "",
+      "displayName": "IMDB view"
+    }
+  ],
+  "decisionStrategy": "UNANIMOUS"
+}

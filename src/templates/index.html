@@ -1,0 +1,108 @@
+<!-- {% load render_bundle from webpack_loader %} -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- The first thing in any HTML file should be the charset -->
+    <meta charset="utf-8"/>
+    <!-- Make the page mobile compatible -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <title>TFAI Web Host</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/static/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/favicons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png" />
+    <!-- link rel="manifest" href="/favicons/manifest.json" / -->
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/static/favicons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#2196F3" />
+    <!-- Facebook -->
+    <meta property="author" content="vipinr" />
+    <meta property="og:site_name" content="TFAI Web Host" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/static/images/logo.jpg" />
+    <style>
+      /* .preloader-init { position: absolute; top: calc(25%); left: calc(50% - 65px) } */
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      .spinner {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+                justify-content: center;
+        min-height: 100vh;
+        overflow: hidden;
+        background-color: #F9FBFF;
+      }
+      svg {
+        width: 120px;
+        height: 120px;
+      }
+      .loader {
+                fill: transparent;
+                animation: showload 1.5s infinite linear;
+                transform-origin: 50% 50%;
+                stroke: #02ce9d;
+                stroke-width: 2;
+                fill: none;
+                stroke-linecap: round
+                }
+        
+              .rotator {
+                animation: rotateme 1s infinite linear;
+                transform-origin: 30px 30px;
+                /* Use 30px instead of 50% as Firefox can't handle percent origins */
+                }
+        
+              @keyframes showload {
+                0%    { stroke-dashoffset: 0; stroke-dasharray: 1,214 }
+                50%  { stroke-dashoffset: -24; stroke-dasharray: 80,214 }
+                100%  { stroke-dashoffset: -107; stroke-dasharray: 80,214 }
+                }
+        
+              @keyframes rotateme {
+                0%    { transform: rotate(0deg) }
+                100%  { transform: rotate(360deg) }
+              }
+    </style>
+    <!-- {% render_bundle 'main' 'css' %} -->
+  </head>
+  <body>
+    <!-- Display a message if JS has been disabled on the browser. -->
+    <noscript>If you're seeing this message, that means <strong>JavaScript has been disabled on your browser</strong>, please <strong>enable JS</strong> to make this app work.</noscript>
+
+    <!-- The app hooks into this div -->
+    <div id="root" data-loginurl="{% url 'social:begin' 'google-oauth2' %}">
+      <!-- <img src="/static/images/spinner.gif" class="preloader-init" alt="spinner" /> -->
+      <div class="spinner">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="60" height="60" viewBox="0 0 120 120">
+          <g class="rotator">
+            <circle class="loader" cx="30" cy="30" r="17" stroke-dasharray="107" stroke-dashoffset="160" />
+          </g>
+        </svg>
+      </div>
+
+    </div>
+    <!-- A lot of magic happens in this file. HtmlWebpackPlugin automatically includes all assets (e.g. bundle.js, main.css) with the correct HTML tags, which is why they are missing in this HTML file. Don't add any assets here! (Check out webpackconfig.js if you want to know more) -->
+    <!-- {% render_bundle 'vendors~main' %}
+    {% render_bundle 'runtime~main' %}
+    {% render_bundle 'main' 'js' %} -->
+  </body>
+</html>
+

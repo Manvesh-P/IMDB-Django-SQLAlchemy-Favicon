@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+from bossoidc.settings import *
+# import bossoidc
+from django.urls import resolve
+import datetime
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,11 +29,49 @@ SECRET_KEY = 'django-insecure-urz_16$6+19qh80lozz4#w9(oq2v##1fg-5@w(4(he4k$c%m!3
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False
 
+# ALLOWED_HOSTS = ['127.0.0.1']
 ALLOWED_HOSTS = []
+
+# KEYCLOAK_BEARER_AUTHENTICATION_EXEMPT_PATHS = ['admin', 'accounts']
+# CONFIG_DIR = os.path.join(os.path.dirname(__file__), os.pardir)
+# print('CONFIG_DIR ---> ', CONFIG_DIR)
+
+# KEYCLOAK_CLIENT_PUBLIC_KEY = """-----BEGIN PUBLIC KEY-----
+# _lcCIOQtrPnb0V3jAYxQrf7YMsj1X3oxDksXRSqL92w
+# -----END PUBLIC KEY -----"""
+
+# KEYCLOAK_CONFIG = {
+#     'KEYCLOAK_REALM': 'myrealm', 
+#     'KEYCLOAK_CLIENT_ID': 'manvesh', 
+#     'KEYCLOAK_DEFAULT_ACCESS': 'ALLOW', 
+#     'KEYCLOAK_AUTHORIZATION_CONFIG': os.path.join(CONFIG_DIR, 'authorization-config.json'), 
+#     'KEYCLOAK_METHOD_VALIDATE_TOKEN': 'DECODE', 
+#     'KEYCLOAK_SERVER_URL': 'http://127.0.0.1:8080/auth/', 
+#     'KEYCLOAK_CLIENT_SECRET_KEY': 'zsnnm6NJf6Luf6fyma8Mp7YLwdOOMgK3', 
+#     'KEYCLOAK_CLIENT_PUBLIC_KEY': '_lcCIOQtrPnb0V3jAYxQrf7YMsj1X3oxDksXRSqL92w'
+# }
 
 
 # Application definition
+
+# INSTALLED_APPS = [
+#     'django.contrib.admin',
+#     'django.contrib.auth',
+#     'django.contrib.contenttypes',
+#     'django.contrib.sessions',
+#     'django.contrib.messages',
+#     'django.contrib.staticfiles', 
+#     # 'IMDBApp', 
+#     # 'bossoidc', 
+#     # 'djangooidc', 
+#     'django_keycloak.apps.KeycloakAppConfig', 
+#     # 'allauth', 
+#     # 'allauth.account', 
+#     # 'allauth.socialaccount', 
+#     # 'allauth.socialaccount.providers.keycloak', 
+# ]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -37,8 +79,98 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles', 
+    'IMDBApp', 
+    'IMDBCore', 
+    # 'bossoidc', 
+    # 'djangooidc', 
+    # 'django_keycloak.apps.KeycloakAppConfig', 
+    # 'allauth', 
+    # 'allauth.account', 
+    # 'allauth.socialaccount', 
+    # 'allauth.socialaccount.providers.keycloak', 
+    'social_django', 
+    'corsheaders', 
+    # 'webpack_loader'
 ]
+
+# SITE_ID = 1
+
+# SOCIALACCOUNT_PROVIDERS = {
+#     'keycloak': {
+#         'KEYCLOAK_URL': 'http://127.0.0.1:8080/auth/', 
+#         'KEYCLOAK_REALM': 'myrealm'
+#     }
+# }
+
+# AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend', 
+#                            'bossoidc.backend.OpenIdConnectBackend', 
+#                           )
+
+# AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend', 
+#                         #    'bossoidc.backend.OpenIdConnectBackend', 
+#                             'allauth.account.auth_backends.AuthenticationBackend', 
+#                           )
+
+AUTHENTICATION_BACKENDS = ('social_core.backends.google.GoogleOAuth2', 
+                        #    'bossoidc.backend.OpenIdConnectBackend', 
+                            # 'allauth.account.auth_backends.AuthenticationBackend', 
+                            'django_keycloak.auth.backends.KeycloakAuthorizationCodeBackend'
+                          )
+
+JWT_AUTH = {
+    'JWT_AUTH_HEADER_PREFIX': 'JWT', 
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300), 
+    'JWT_AUTH_HEADER_PREFIX': 'Bearer'
+}
+# AUTH_URI = 'http://127.0.0.1:8080/auth/realms/myrealm'
+# PUBLIC_URI = 'http://127.0.0.1:8000/'
+# CLIENT_ID = 'myclient'
+# CLIENT_ID = 'manvesh'
+
+# configure_oidc(AUTH_URI, CLIENT_ID, PUBLIC_URI)
+
+# current_url = ''
+# LOGIN_URL = 'http://127.0.0.1:8080/'
+# LOGIN_URL = 'http://127.0.0.1:8080/auth/realms/myrealm'
+# LOGIN_URL = 'http://127.0.0.1:8080/admin/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/account/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/*'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/IMDBApp'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://*'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/get/director/with/max/number/of/movies/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&scope=openid&redirect_uri=http://127.0.0.1:8000/'
+# LOGIN_URL = 'keycloak_login'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&scope=openid&redirect_uri=http://127.0.0.1:8000/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&scope=openid&redirect_uri=http://127.0.0.1:8000'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&scope=openid'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&scope=openid'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&&redirect_uri=http://*'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&&redirect_uri=http://127.0.0.1/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&&redirect_uri=http://127.0.0.1:8000/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&&redirect_uri=http://127.0.0.1:8000/&response_type=code'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&redirect_uri=http://127.0.0.1:8000/&response_type=code'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&redirect_uri=http://127.0.0.1:8000/&response_type=code&state=fj8o3n7bdy1op5'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&redirect_uri=http://127.0.0.1:8000/&response_type=code&state=fj8o3n7bdy1op5&scope=openid'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&redirect_uri=http://127.0.0.1:8000/&response_type=authorization_code&state=fj8o3n7bdy1op5&scope=openid'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&redirect_uri=http://127.0.0.1:8000/&response_type=code&state=fj8o3n7bdy1op5&scope=openid'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://localhost/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=get/director/with/max/number/of/movies/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://localhost/get/director/with/max/number/of/movies/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://localhost:8000/get/director/with/max/number/of/movies/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code'
+
+# print('LOGIN_URL ---> ', LOGIN_URL)
+
+KEYCLOAK_OIDC_PROFILE_MODEL = 'django_keycloak.OpenIdConnectProfile'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -47,10 +179,18 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware', 
+    # 'django_keycloak.middleware.BaseKeycloakMiddleware', 
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
+# AUTHENTICATION_BACKENDS = ['django_keycloak.auth.backends.KeycloakAuthorizationCodeBackend']
+# LOGIN_URL = 'keycloak_login'
+# KEYCLOAK_OIDCPROFILE_MODEL = 'django_keycloak.OpenIdConnectProfile'
+
+
 ROOT_URLCONF = 'IMDBProject.urls'
+LOGIN_REDIRECT_URL = '/'
 
 TEMPLATES = [
     {
@@ -62,7 +202,9 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+                'django.contrib.messages.context_processors.messages', 
+                'social_django.context_processors.backends', 
+                'social_django.context_processors.login_redirect'
             ],
         },
     },
@@ -100,7 +242,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+# WEBPACK_LOADER = {
+#     'DEFAULT': {
+#         'BUNDLE_DIR_NAME': 'bundles/', 
+#         'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json')
+#     }
+# }
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
