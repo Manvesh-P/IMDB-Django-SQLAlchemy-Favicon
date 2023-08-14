@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import (render, 
+                              redirect)
 from rest_framework.views import APIView
+from django.views.generic import RedirectView
 from sqlalchemy.exc import (IntegrityError,
                             InterfaceError,
                             OperationalError,
@@ -12,10 +14,75 @@ from session_maker import SessionManager
 print('session maker returned session')
 from logger_files.custom_logger import logger
 from ActualLogic import ActualLogicServer
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+from django.contrib.auth import logout
+from pprint import pprint
+from IMDBProject.settings import LOGIN_URL
+
 # Create your views here.
 
+# home_view = 0
+check_authentication_count = 0
+query_srting = ''
 session = SessionManager().get_session()
 print('session created')
+
+# class GetToken(APIView):
+#     def get(self, request):
+#         # with open('templates/token_html', mode='w') as f:
+#         print(request.data)
+#         print(request)
+#         # print(request.META)
+#         pprint(request.META)
+#         with open('templates/_token.html', mode='w') as f:
+#             html_str = """\
+#                 <html>
+#                     <body>
+#                         <p>"GetToken" service got a hit</p>
+#                     </body>
+#                 </html>
+#             """
+#             f.write(html_str)
+#         logout(request)
+#         return render(request, '_token.html', {})
+        # return redirect('http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/logout')
+        # return redirect('http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/logout/logout-confirm/')
+
+class HomeView(APIView):
+    def get(self, request):
+        global home_view
+
+        # query_string_view += 1
+        # home_view += 1
+        # print('home_view ---> ', home_view)
+        pprint(request.META)
+
+        return render(request, 'home_view.html', {})
+    
+class LogOut(APIView):
+    def get(self, request):
+        print('Entered into "LogOut" service')
+        global check_authentication_count
+
+        check_authentication_count = 0
+        return redirect('http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/logout/')
+
+
+def check_authentication(_fun):
+    def _wrapper(*args, **kwargs):
+        print('_fun ---> ', _fun)
+        global check_authentication_count
+
+        check_authentication_count += 1
+        print('check_authentication_count ---> ', check_authentication_count)
+        if check_authentication_count > 1:
+            return _fun(*args, **kwargs)
+        else:
+            return redirect(LOGIN_URL)
+        _fun(*args, **kwargs)
+    return _wrapper
+
 
 class InsertMoviesData(APIView):
     def post(self, request):
@@ -67,9 +134,18 @@ class InsertMoviesData(APIView):
 
             return render(request, 'template_1.html', {})
 
-
+# @login_required
+# @method_decorator(login_required)
+# @method_decorator(login_required, name='get')
+# @method_decorator(login_required, name='dispatch')
 class GetDirectorWithMaxNumberOfMovies(APIView):
+# class GetDirectorWithMaxNumberOfMovies(RedirectView):
+    # @login_required
+    @check_authentication
     def get(self, request):
+    # def dispatch(self, request):
+        # logout(request)
+        print('Entered into "GetDirectorWithMaxNumberOfMovies"')
         l = []
         try:
             session_obj = session()
@@ -120,6 +196,7 @@ class GetDirectorWithMaxNumberOfMovies(APIView):
             logger.info('session closed')
 
             return render(request, 'template_2.html', {})
+        # return redirect('http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code')
 
 
 class GetTopTenMoviesBasedOnIMDBScore(APIView):

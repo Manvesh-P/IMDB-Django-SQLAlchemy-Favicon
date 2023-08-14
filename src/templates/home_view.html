@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html>
+    <body>
+        <a href="http://127.0.0.1:8000/api/IMDBApp/get/director/with/max/number/of/movies/">Director_With_Max_Number_Of_Movies</a>
+        <a href="http://127.0.0.1:8000/api/IMDBApp/get/top/ten/movies/based/on/imdb_score/">Top_Ten_Movies_Based_On_IMDBScore</a>
+        <a href="http://127.0.0.1:8000/api/IMDBApp/get/least/watched/movie/based/on/imdb_score/">Least_Watched_Movie_Based_On_IMDBScore</a>
+        <a href="http://127.0.0.1:8000/api/IMDBApp/get/most/watched/genre/">Most_Watched_Genre</a>
+        <a href="http://127.0.0.1:8000/api/IMDBApp/get/most/popular/director/in/first/hundread/movies/">Most_Popular_Director_In_FirstHundread_Movies</a>
+        <a href="http://127.0.0.1:8000/api/IMDBApp/logout/">LogOut</a>
+    </body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+    <body>
+        <ul>
+            <li><a href="http://127.0.0.1:8000/api/IMDBApp/get/director/with/max/number/of/movies/">Director_With_Max_Number_Of_Movies</a></li>
+            <li><a href="http://127.0.0.1:8000/api/IMDBApp/get/top/ten/movies/based/on/imdb_score/">Top_Ten_Movies_Based_On_IMDBScore</a></li>
+            <li><a href="http://127.0.0.1:8000/api/IMDBApp/get/least/watched/movie/based/on/imdb_score/">Least_Watched_Movie_Based_On_IMDBScore</a></li>
+            <li><a href="http://127.0.0.1:8000/api/IMDBApp/get/most/watched/genre/">Most_Watched_Genre</a></li>
+            <li><a href="http://127.0.0.1:8000/api/IMDBApp/get/most/popular/director/in/first/hundread/movies/">Most_Popular_Director_In_FirstHundread_Movies</a></li>
+            <li><a href="http://127.0.0.1:8000/api/IMDBApp/logout/">LogOut</a></li>
+        </ul>
+    </body>
+</html> -->
+
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <!-- <head> -->
+        <!-- <style>
+            .custom_ul_tag{
+                display: block;
+                width: 115px;
+                height: 25px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 25px;
+            }
+        </style> -->
+    <!-- </head> -->
+    <body>
+        <div>
+            <!-- <img src="/home/nikhilmanvesh/Downloads/imdb_favicon/favicon-32x32.png"> -->
+            <img src="/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg">
+            <p style="text-align: center;font-size: 80px;">IMDB</p>
+        </div>
+        <hr>
+        <div>
+            <ul style="list-style-type: none;" class="custom_ul_tag">
+                <li><a href="http://127.0.0.1:8000/api/IMDBApp/logout/" style="float:right">LogOut</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <!-- <li><a href="http://127.0.0.1:8000/api/IMDBApp/logout/" style="float:right">LogOut</a></li> -->
+                <li><a href="http://127.0.0.1:8000/api/IMDBApp/get/director/with/max/number/of/movies/">Director_With_Max_Number_Of_Movies</a></li>
+                <li><a href="http://127.0.0.1:8000/api/IMDBApp/get/top/ten/movies/based/on/imdb_score/">Top_Ten_Movies_Based_On_IMDBScore</a></li>
+                <li><a href="http://127.0.0.1:8000/api/IMDBApp/get/least/watched/movie/based/on/imdb_score/">Least_Watched_Movie_Based_On_IMDBScore</a></li>
+                <li><a href="http://127.0.0.1:8000/api/IMDBApp/get/most/watched/genre/">Most_Watched_Genre</a></li>
+                <li><a href="http://127.0.0.1:8000/api/IMDBApp/get/most/popular/director/in/first/hundread/movies/">Most_Popular_Director_In_FirstHundread_Movies</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

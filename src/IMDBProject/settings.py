@@ -38,7 +38,40 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # 'bossoidc', 
+    # 'djangooidc', 
+    'IMDBApp', 
+    # 'social_django'
 ]
+
+
+# KEYCLOAK_OIDC_PROFILE_MODEL = 'django_keycloak.OpenIdConnectProfile'
+
+# AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend', 
+#                            'bossoidc.backend.OpenIdConnectBackend')
+
+# AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend', 
+#                            'bossoidc.backend.OpenIdConnectBackend')
+
+# # auth_uri = 'http://127.0.0.1:8080/auth/realms/myrealm'
+# # auth_uri = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth'
+# auth_uri = 'http://127.0.0.1:8080/realms/myrealm/protocol/'
+# client_id = 'manvesh'
+# public_uri = 'http://127.0.0.1:8000'
+
+# from bossoidc.settings import *
+
+
+# configure_oidc(auth_uri, client_id, public_uri)
+
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/get_token/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/api/IMDBApp/get_token/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/api/IMDBApp/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/'
+# LOGIN_REDIRECT_URL = ''   
+LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/api/IMDBApp/home/view/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -63,6 +96,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                # 'social_django.context_processors.backends', 
+                # 'social_django.context_processors.login_redirect'
             ],
         },
     },
@@ -74,10 +110,17 @@ WSGI_APPLICATION = 'IMDBProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
 
