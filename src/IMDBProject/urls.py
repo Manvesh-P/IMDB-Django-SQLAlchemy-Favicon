@@ -38,6 +38,23 @@ from django.conf.urls import include
 #     path('get/most/popular/director/in/first/hundread/movies/', GetMostPopularDirectorInFirstHundreadMovies.as_view()),
 # ]
 
+# urlpatterns = [
+#     # path('admin/', admin.site.urls),
+#     # path('insert/entire/data/', InsertMoviesData.as_view()),
+#     # path('get/favicon/', RedirectView.as_view(url=staticfiles_storage.url('favicon.ico/'))),
+#     # path('get/director/with/max/number/of/movies/', GetDirectorWithMaxNumberOfMovies.as_view()),
+#     # path('get/top/ten/movies/based/on/imdb_score/', GetTopTenMoviesBasedOnIMDBScore.as_view()),
+#     # path('get/least/watched/movie/based/on/imdb_score/', GetLeastWatchedMovieBasedOnIMDBScore.as_view()),
+#     # path('get/most/watched/genre/', GetMostWatchedGenre.as_view()),
+#     # path('get/most/popular/director/in/first/hundread/movies/', GetMostPopularDirectorInFirstHundreadMovies.as_view()),
+#     # path('openid/', include('djangooidc.urls')), 
+#     # path('api/IMDBApp/', include('IMDBApp.urls', namespace='IMDBApp'))
+
+#     # path(r'auth/', include('social_django.urls', namespace='social')), 
+#     path(r'api/IMDBApp/', include('IMDBApp.urls', namespace='IMDBApp'))
+
+# ]
+
 urlpatterns = [
     # path('admin/', admin.site.urls),
     # path('insert/entire/data/', InsertMoviesData.as_view()),
@@ -51,6 +68,6 @@ urlpatterns = [
     # path('api/IMDBApp/', include('IMDBApp.urls', namespace='IMDBApp'))
 
     # path(r'auth/', include('social_django.urls', namespace='social')), 
+    path(r'auth/', include('social_django.urls', namespace='social')), 
     path(r'api/IMDBApp/', include('IMDBApp.urls', namespace='IMDBApp'))
-
 ]

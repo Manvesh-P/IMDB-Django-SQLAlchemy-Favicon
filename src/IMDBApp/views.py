@@ -56,7 +56,7 @@ class HomeView(APIView):
         # query_string_view += 1
         # home_view += 1
         # print('home_view ---> ', home_view)
-        pprint(request.META)
+        # pprint(request.META)
 
         return render(request, 'home_view.html', {})
     
@@ -72,14 +72,25 @@ class LogOut(APIView):
 def check_authentication(_fun):
     def _wrapper(*args, **kwargs):
         print('_fun ---> ', _fun)
+        print('API name ---> ', str(_fun).split()[1].split('.')[0])
+        API_name = str(_fun).split()[1].split('.')[0]
+        # print('_fun() ---> ', _fun(*args, **kwargs))
         global check_authentication_count
 
         check_authentication_count += 1
         print('check_authentication_count ---> ', check_authentication_count)
         if check_authentication_count > 1:
+        # if check_authentication_count > 2:
+        # if check_authentication_count > 3:
             return _fun(*args, **kwargs)
         else:
+
+            # _LOGIN_URL = '&'.join(LOGIN_URL.split('&')[: : -1][1: ][: : -1] + [('http://127.0.0.1:8000/api/IMDBApp/%s' % API_name)])
+            # _LOGIN_URL = '&'.join(LOGIN_URL.split('&')[: : -1][1: ][: : -1] + [('http://127.0.0.1:8000/api/IMDBApp/%s/' % API_name)])
+            _LOGIN_URL = '&'.join(LOGIN_URL.split('&')[: : -1][1: ][: : -1] + [('redirect_uri=http://127.0.0.1:8000/api/IMDBApp/%s/' % API_name)])
+            print('_LOGIN_URL ---> ', _LOGIN_URL)
             return redirect(LOGIN_URL)
+            # return redirect(_LOGIN_URL)
         _fun(*args, **kwargs)
     return _wrapper
 
@@ -307,6 +318,7 @@ class GetLeastWatchedMovieBasedOnIMDBScore(APIView):
 
 class GetMostWatchedGenre(APIView):
     def get(self, request):
+        print('******************* Entered into "GetMostWatchedGenre" view *****************')
         l = []
         try:
             session_obj = session()

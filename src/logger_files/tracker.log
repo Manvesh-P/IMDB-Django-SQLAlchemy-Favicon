@@ -10435,3 +10435,1350 @@ FROM imdb_info_two
      13098    20       INFO _commit_impl            Thread-20   17:55:05 815.6380653381348     COMMIT
      13098    20       INFO        get            Thread-20   17:55:05 816.2150382995605 session committed
      13098    20       INFO        get            Thread-20   17:55:05 816.5953159332275 session closed
+     18542    20       INFO get_engine              Dummy-1   20:01:14 537.5020503997803 engine created
+     18542    20       INFO _execute_context              Dummy-1   20:01:14 641.6022777557373 select pg_catalog.version()
+     18542    20       INFO _execute_context              Dummy-1   20:01:14 641.8344974517822 [raw sql] {}
+     18542    20       INFO _execute_context              Dummy-1   20:01:14 642.7152156829834 select current_schema()
+     18542    20       INFO _execute_context              Dummy-1   20:01:14 642.8947448730469 [raw sql] {}
+     18542    20       INFO _execute_context              Dummy-1   20:01:14 643.7156200408936 show standard_conforming_strings
+     18542    20       INFO _execute_context              Dummy-1   20:01:14 643.8827514648438 [raw sql] {}
+     18542    20       INFO _begin_impl              Dummy-1   20:01:14 644.418478012085 BEGIN (implicit)
+     18542    20       INFO _execute_context              Dummy-1   20:01:14 645.4837322235107 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     18542    20       INFO _execute_context              Dummy-1   20:01:14 645.6418037414551 [generated in 0.00028s] {'name': 'imdb_info_two'}
+     18542    20       INFO _commit_impl              Dummy-1   20:01:14 646.9542980194092     COMMIT
+     19009    20       INFO get_engine              Dummy-1   20:08:55 639.6973133087158 engine created
+     19009    20       INFO _execute_context              Dummy-1   20:08:55 667.6034927368164 select pg_catalog.version()
+     19009    20       INFO _execute_context              Dummy-1   20:08:55 667.8576469421387 [raw sql] {}
+     19009    20       INFO _execute_context              Dummy-1   20:08:55 668.750524520874 select current_schema()
+     19009    20       INFO _execute_context              Dummy-1   20:08:55 668.9019203186035 [raw sql] {}
+     19009    20       INFO _execute_context              Dummy-1   20:08:55 669.5215702056885 show standard_conforming_strings
+     19009    20       INFO _execute_context              Dummy-1   20:08:55 669.6591377258301 [raw sql] {}
+     19009    20       INFO _begin_impl              Dummy-1   20:08:55 670.2566146850586 BEGIN (implicit)
+     19009    20       INFO _execute_context              Dummy-1   20:08:55 671.3101863861084 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     19009    20       INFO _execute_context              Dummy-1   20:08:55 671.4720726013184 [generated in 0.00027s] {'name': 'imdb_info_two'}
+     19009    20       INFO _commit_impl              Dummy-1   20:08:55 672.9128360748291     COMMIT
+     19009    40      ERROR log_response             Thread-4   20:10:36 402.3740291595459 Internal Server Error: /api/IMDBApp/get/director/with/max/number/of/movies/
+Traceback (most recent call last):
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'GetDirectorWithMaxNumberOfMovies' object has no attribute 'user'
+     19009    30    WARNING log_response             Thread-4   20:10:36 579.401969909668 Not Found: /favicon.ico
+     19245    20       INFO get_engine              Dummy-1   20:10:56 981.4066886901855 engine created
+     19245    20       INFO _execute_context              Dummy-1   20:10:56 992.3233985900879 select pg_catalog.version()
+     19245    20       INFO _execute_context              Dummy-1   20:10:56 992.5498962402344 [raw sql] {}
+     19245    20       INFO _execute_context              Dummy-1   20:10:56 993.4215545654297 select current_schema()
+     19245    20       INFO _execute_context              Dummy-1   20:10:56 993.6089515686035 [raw sql] {}
+     19245    20       INFO _execute_context              Dummy-1   20:10:56 994.4093227386475 show standard_conforming_strings
+     19245    20       INFO _execute_context              Dummy-1   20:10:56 994.6258068084717 [raw sql] {}
+     19245    20       INFO _begin_impl              Dummy-1   20:10:56 995.2335357666016 BEGIN (implicit)
+     19245    20       INFO _execute_context              Dummy-1   20:10:56 996.4854717254639 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     19245    20       INFO _execute_context              Dummy-1   20:10:56 996.6602325439453 [generated in 0.00030s] {'name': 'imdb_info_two'}
+     19245    20       INFO _commit_impl              Dummy-1   20:10:56 998.2945919036865     COMMIT
+     19245    30    WARNING log_response             Thread-2   20:11:42 114.01724815368652 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     19245    30    WARNING log_response             Thread-2   20:11:42 132.94196128845215 Not Found: /favicon.ico
+     19245    30    WARNING log_response             Thread-3   20:12:00 603.865385055542 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     19245    30    WARNING log_response             Thread-3   20:12:00 611.0568046569824 Not Found: /favicon.ico
+     19312    20       INFO get_engine              Dummy-1   20:12:31 617.4676418304443 engine created
+     19312    20       INFO _execute_context              Dummy-1   20:12:31 628.0956268310547 select pg_catalog.version()
+     19312    20       INFO _execute_context              Dummy-1   20:12:31 628.3712387084961 [raw sql] {}
+     19312    20       INFO _execute_context              Dummy-1   20:12:31 629.2450428009033 select current_schema()
+     19312    20       INFO _execute_context              Dummy-1   20:12:31 629.3826103210449 [raw sql] {}
+     19312    20       INFO _execute_context              Dummy-1   20:12:31 630.049467086792 show standard_conforming_strings
+     19312    20       INFO _execute_context              Dummy-1   20:12:31 630.2509307861328 [raw sql] {}
+     19312    20       INFO _begin_impl              Dummy-1   20:12:31 630.9010982513428 BEGIN (implicit)
+     19312    20       INFO _execute_context              Dummy-1   20:12:31 632.286548614502 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     19312    20       INFO _execute_context              Dummy-1   20:12:31 632.5232982635498 [generated in 0.00037s] {'name': 'imdb_info_two'}
+     19312    20       INFO _commit_impl              Dummy-1   20:12:31 634.2909336090088     COMMIT
+     19312    30    WARNING log_response             Thread-2   20:13:30 426.1467456817627 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     19312    30    WARNING log_response             Thread-2   20:13:30 433.6707592010498 Not Found: /favicon.ico
+     20096    20       INFO get_engine              Dummy-1   20:17:07 959.4743251800537 engine created
+     20096    20       INFO _execute_context              Dummy-1   20:17:08 30.18784523010254 select pg_catalog.version()
+     20096    20       INFO _execute_context              Dummy-1   20:17:08 30.441761016845703 [raw sql] {}
+     20096    20       INFO _execute_context              Dummy-1   20:17:08 31.355857849121094 select current_schema()
+     20096    20       INFO _execute_context              Dummy-1   20:17:08 31.542539596557617 [raw sql] {}
+     20096    20       INFO _execute_context              Dummy-1   20:17:08 32.24635124206543 show standard_conforming_strings
+     20096    20       INFO _execute_context              Dummy-1   20:17:08 32.399892807006836 [raw sql] {}
+     20096    20       INFO _begin_impl              Dummy-1   20:17:08 32.982587814331055 BEGIN (implicit)
+     20096    20       INFO _execute_context              Dummy-1   20:17:08 34.082651138305664 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     20096    20       INFO _execute_context              Dummy-1   20:17:08 34.28220748901367 [generated in 0.00032s] {'name': 'imdb_info_two'}
+     20096    20       INFO _commit_impl              Dummy-1   20:17:08 35.82501411437988     COMMIT
+     20096    30    WARNING log_response             Thread-2   20:17:41 835.7336521148682 Not Found: /
+     20096    30    WARNING log_response             Thread-2   20:17:41 894.8020935058594 Not Found: /favicon.ico
+     20611    20       INFO get_engine              Dummy-1   20:24:10 478.32393646240234 engine created
+     20611    20       INFO _execute_context              Dummy-1   20:24:10 485.8582019805908 select pg_catalog.version()
+     20611    20       INFO _execute_context              Dummy-1   20:24:10 486.05918884277344 [raw sql] {}
+     20611    20       INFO _execute_context              Dummy-1   20:24:10 486.91487312316895 select current_schema()
+     20611    20       INFO _execute_context              Dummy-1   20:24:10 487.119197845459 [raw sql] {}
+     20611    20       INFO _execute_context              Dummy-1   20:24:10 487.90884017944336 show standard_conforming_strings
+     20611    20       INFO _execute_context              Dummy-1   20:24:10 488.0239963531494 [raw sql] {}
+     20611    20       INFO _begin_impl              Dummy-1   20:24:10 488.57998847961426 BEGIN (implicit)
+     20611    20       INFO _execute_context              Dummy-1   20:24:10 489.52364921569824 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     20611    20       INFO _execute_context              Dummy-1   20:24:10 489.6540641784668 [generated in 0.00022s] {'name': 'imdb_info_two'}
+     20611    20       INFO _commit_impl              Dummy-1   20:24:10 490.69714546203613     COMMIT
+     20611    30    WARNING log_response             Thread-2   20:24:36 384.7010135650635 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     20611    30    WARNING log_response             Thread-2   20:24:41 997.6620674133301 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     20611    30    WARNING log_response             Thread-2   20:24:44 678.1458854675293 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     20611    30    WARNING log_response             Thread-2   20:24:55 933.119535446167 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     20611    30    WARNING log_response             Thread-2   20:24:58 173.15363883972168 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     20611    30    WARNING log_response             Thread-2   20:24:59 596.0268974304199 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     20611    30    WARNING log_response             Thread-2   20:25:00 356.3354015350342 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     20747    20       INFO get_engine              Dummy-1   20:25:15 828.031063079834 engine created
+     20747    20       INFO _execute_context              Dummy-1   20:25:15 833.4951400756836 select pg_catalog.version()
+     20747    20       INFO _execute_context              Dummy-1   20:25:15 833.6489200592041 [raw sql] {}
+     20747    20       INFO _execute_context              Dummy-1   20:25:15 834.0246677398682 select current_schema()
+     20747    20       INFO _execute_context              Dummy-1   20:25:15 834.1109752655029 [raw sql] {}
+     20747    20       INFO _execute_context              Dummy-1   20:25:15 834.4113826751709 show standard_conforming_strings
+     20747    20       INFO _execute_context              Dummy-1   20:25:15 834.4900608062744 [raw sql] {}
+     20747    20       INFO _begin_impl              Dummy-1   20:25:15 834.7697257995605 BEGIN (implicit)
+     20747    20       INFO _execute_context              Dummy-1   20:25:15 835.2508544921875 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     20747    20       INFO _execute_context              Dummy-1   20:25:15 835.3192806243896 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     20747    20       INFO _commit_impl              Dummy-1   20:25:15 835.9551429748535     COMMIT
+     20747    30    WARNING log_response             Thread-2   20:25:19 492.5799369812012 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     20747    30    WARNING log_response             Thread-2   20:25:29 416.8422222137451 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     20747    30    WARNING log_response             Thread-2   20:28:40 307.79504776000977 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     20747    30    WARNING log_response             Thread-2   20:29:14 558.974027633667 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     20995    20       INFO get_engine              Dummy-1   20:30:29 390.39158821105957 engine created
+     20995    20       INFO _execute_context              Dummy-1   20:30:29 395.6270217895508 select pg_catalog.version()
+     20995    20       INFO _execute_context              Dummy-1   20:30:29 395.7526683807373 [raw sql] {}
+     20995    20       INFO _execute_context              Dummy-1   20:30:29 396.1443901062012 select current_schema()
+     20995    20       INFO _execute_context              Dummy-1   20:30:29 396.21448516845703 [raw sql] {}
+     20995    20       INFO _execute_context              Dummy-1   20:30:29 396.4846134185791 show standard_conforming_strings
+     20995    20       INFO _execute_context              Dummy-1   20:30:29 396.5435028076172 [raw sql] {}
+     20995    20       INFO _begin_impl              Dummy-1   20:30:29 396.79932594299316 BEGIN (implicit)
+     20995    20       INFO _execute_context              Dummy-1   20:30:29 397.2909450531006 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     20995    20       INFO _execute_context              Dummy-1   20:30:29 397.3686695098877 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     20995    20       INFO _commit_impl              Dummy-1   20:30:29 398.1168270111084     COMMIT
+     21006    20       INFO get_engine              Dummy-1   20:30:42 210.45637130737305 engine created
+     21006    20       INFO _execute_context              Dummy-1   20:30:42 215.76905250549316 select pg_catalog.version()
+     21006    20       INFO _execute_context              Dummy-1   20:30:42 215.89946746826172 [raw sql] {}
+     21006    20       INFO _execute_context              Dummy-1   20:30:42 216.28308296203613 select current_schema()
+     21006    20       INFO _execute_context              Dummy-1   20:30:42 216.3538932800293 [raw sql] {}
+     21006    20       INFO _execute_context              Dummy-1   20:30:42 216.68601036071777 show standard_conforming_strings
+     21006    20       INFO _execute_context              Dummy-1   20:30:42 216.7658805847168 [raw sql] {}
+     21006    20       INFO _begin_impl              Dummy-1   20:30:42 217.03672409057617 BEGIN (implicit)
+     21006    20       INFO _execute_context              Dummy-1   20:30:42 217.5579071044922 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     21006    20       INFO _execute_context              Dummy-1   20:30:42 217.63229370117188 [generated in 0.00012s] {'name': 'imdb_info_two'}
+     21006    20       INFO _commit_impl              Dummy-1   20:30:42 218.28293800354004     COMMIT
+     21018    20       INFO get_engine              Dummy-1   20:30:44 745.2878952026367 engine created
+     21018    20       INFO _execute_context              Dummy-1   20:30:44 751.1692047119141 select pg_catalog.version()
+     21018    20       INFO _execute_context              Dummy-1   20:30:44 751.3065338134766 [raw sql] {}
+     21018    20       INFO _execute_context              Dummy-1   20:30:44 751.727819442749 select current_schema()
+     21018    20       INFO _execute_context              Dummy-1   20:30:44 751.7924308776855 [raw sql] {}
+     21018    20       INFO _execute_context              Dummy-1   20:30:44 752.0351409912109 show standard_conforming_strings
+     21018    20       INFO _execute_context              Dummy-1   20:30:44 752.0890235900879 [raw sql] {}
+     21018    20       INFO _begin_impl              Dummy-1   20:30:44 752.3081302642822 BEGIN (implicit)
+     21018    20       INFO _execute_context              Dummy-1   20:30:44 752.8970241546631 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     21018    20       INFO _execute_context              Dummy-1   20:30:44 752.9776096343994 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     21018    20       INFO _commit_impl              Dummy-1   20:30:44 753.5967826843262     COMMIT
+     21025    20       INFO get_engine              Dummy-1   20:30:49 315.2186870574951 engine created
+     21025    20       INFO _execute_context              Dummy-1   20:30:49 321.98214530944824 select pg_catalog.version()
+     21025    20       INFO _execute_context              Dummy-1   20:30:49 322.11899757385254 [raw sql] {}
+     21025    20       INFO _execute_context              Dummy-1   20:30:49 322.6931095123291 select current_schema()
+     21025    20       INFO _execute_context              Dummy-1   20:30:49 322.7870464324951 [raw sql] {}
+     21025    20       INFO _execute_context              Dummy-1   20:30:49 323.04906845092773 show standard_conforming_strings
+     21025    20       INFO _execute_context              Dummy-1   20:30:49 323.103666305542 [raw sql] {}
+     21025    20       INFO _begin_impl              Dummy-1   20:30:49 323.30822944641113 BEGIN (implicit)
+     21025    20       INFO _execute_context              Dummy-1   20:30:49 323.7590789794922 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     21025    20       INFO _execute_context              Dummy-1   20:30:49 323.8363265991211 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     21025    20       INFO _commit_impl              Dummy-1   20:30:49 324.4349956512451     COMMIT
+     21025    30    WARNING log_response             Thread-2   20:33:46 607.5246334075928 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     21025    30    WARNING log_response             Thread-2   20:34:29 11.438131332397461 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     21320    20       INFO get_engine              Dummy-1   20:38:43 764.9579048156738 engine created
+     21320    20       INFO _execute_context              Dummy-1   20:38:43 769.7973251342773 select pg_catalog.version()
+     21320    20       INFO _execute_context              Dummy-1   20:38:43 769.9308395385742 [raw sql] {}
+     21320    20       INFO _execute_context              Dummy-1   20:38:43 770.4470157623291 select current_schema()
+     21320    20       INFO _execute_context              Dummy-1   20:38:43 770.5614566802979 [raw sql] {}
+     21320    20       INFO _execute_context              Dummy-1   20:38:43 771.0738182067871 show standard_conforming_strings
+     21320    20       INFO _execute_context              Dummy-1   20:38:43 771.1732387542725 [raw sql] {}
+     21320    20       INFO _begin_impl              Dummy-1   20:38:43 771.5809345245361 BEGIN (implicit)
+     21320    20       INFO _execute_context              Dummy-1   20:38:43 772.1059322357178 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     21320    20       INFO _execute_context              Dummy-1   20:38:43 772.2012996673584 [generated in 0.00015s] {'name': 'imdb_info_two'}
+     21320    20       INFO _commit_impl              Dummy-1   20:38:43 773.1308937072754     COMMIT
+     21320    30    WARNING log_response             Thread-2   20:38:51 337.97168731689453 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     21320    30    WARNING log_response             Thread-2   20:38:58 770.7118988037109 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     21320    30    WARNING log_response             Thread-7   20:56:19 547.3592281341553 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     21320    30    WARNING log_response             Thread-7   20:56:20 97.75495529174805 Not Found: /favicon.ico
+     21320    30    WARNING log_response             Thread-7   20:56:25 527.9843807220459 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     21320    30    WARNING log_response             Thread-7   20:56:25 576.2224197387695 Not Found: /favicon.ico
+     23782    20       INFO get_engine              Dummy-1   21:15:17 4.780769348144531 engine created
+     23782    20       INFO _execute_context              Dummy-1   21:15:17 65.10353088378906 select pg_catalog.version()
+     23782    20       INFO _execute_context              Dummy-1   21:15:17 65.2766227722168 [raw sql] {}
+     23782    20       INFO _execute_context              Dummy-1   21:15:17 65.75560569763184 select current_schema()
+     23782    20       INFO _execute_context              Dummy-1   21:15:17 65.86885452270508 [raw sql] {}
+     23782    20       INFO _execute_context              Dummy-1   21:15:17 66.27082824707031 show standard_conforming_strings
+     23782    20       INFO _execute_context              Dummy-1   21:15:17 66.36285781860352 [raw sql] {}
+     23782    20       INFO _begin_impl              Dummy-1   21:15:17 66.74408912658691 BEGIN (implicit)
+     23782    20       INFO _execute_context              Dummy-1   21:15:17 67.50345230102539 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     23782    20       INFO _execute_context              Dummy-1   21:15:17 67.67606735229492 [generated in 0.00026s] {'name': 'imdb_info_two'}
+     23782    20       INFO _commit_impl              Dummy-1   21:15:17 68.65334510803223     COMMIT
+     27701    20       INFO get_engine              Dummy-1   11:20:28 717.7603244781494 engine created
+     27701    20       INFO _execute_context              Dummy-1   11:20:28 778.7506580352783 select pg_catalog.version()
+     27701    20       INFO _execute_context              Dummy-1   11:20:28 779.0977954864502 [raw sql] {}
+     27701    20       INFO _execute_context              Dummy-1   11:20:28 779.956579208374 select current_schema()
+     27701    20       INFO _execute_context              Dummy-1   11:20:28 780.1880836486816 [raw sql] {}
+     27701    20       INFO _execute_context              Dummy-1   11:20:28 781.2535762786865 show standard_conforming_strings
+     27701    20       INFO _execute_context              Dummy-1   11:20:28 781.5232276916504 [raw sql] {}
+     27701    20       INFO _begin_impl              Dummy-1   11:20:28 782.4089527130127 BEGIN (implicit)
+     27701    20       INFO _execute_context              Dummy-1   11:20:28 783.8921546936035 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     27701    20       INFO _execute_context              Dummy-1   11:20:28 784.1188907623291 [generated in 0.00038s] {'name': 'imdb_info_two'}
+     27701    20       INFO _commit_impl              Dummy-1   11:20:28 785.8302593231201     COMMIT
+     27972    20       INFO get_engine              Dummy-1   11:22:36 334.1083526611328 engine created
+     27972    20       INFO _execute_context              Dummy-1   11:22:36 344.35319900512695 select pg_catalog.version()
+     27972    20       INFO _execute_context              Dummy-1   11:22:36 344.602108001709 [raw sql] {}
+     27972    20       INFO _execute_context              Dummy-1   11:22:36 345.48115730285645 select current_schema()
+     27972    20       INFO _execute_context              Dummy-1   11:22:36 345.6876277923584 [raw sql] {}
+     27972    20       INFO _execute_context              Dummy-1   11:22:36 346.5564250946045 show standard_conforming_strings
+     27972    20       INFO _execute_context              Dummy-1   11:22:36 346.8053340911865 [raw sql] {}
+     27972    20       INFO _begin_impl              Dummy-1   11:22:36 347.80168533325195 BEGIN (implicit)
+     27972    20       INFO _execute_context              Dummy-1   11:22:36 348.8442897796631 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     27972    20       INFO _execute_context              Dummy-1   11:22:36 349.0276336669922 [generated in 0.00030s] {'name': 'imdb_info_two'}
+     27972    20       INFO _commit_impl              Dummy-1   11:22:36 350.2061367034912     COMMIT
+     27972    30    WARNING log_response             Thread-4   11:31:47 748.6233711242676 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     27972    30    WARNING log_response             Thread-4   11:31:48 141.29972457885742 Not Found: /favicon.ico
+     27972    30    WARNING log_response             Thread-5   11:31:53 133.38375091552734 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     28944    20       INFO get_engine              Dummy-1   11:32:17 802.1116256713867 engine created
+     28944    20       INFO _execute_context              Dummy-1   11:32:17 809.8738193511963 select pg_catalog.version()
+     28944    20       INFO _execute_context              Dummy-1   11:32:17 810.1184368133545 [raw sql] {}
+     28944    20       INFO _execute_context              Dummy-1   11:32:17 811.1147880554199 select current_schema()
+     28944    20       INFO _execute_context              Dummy-1   11:32:17 811.3696575164795 [raw sql] {}
+     28944    20       INFO _execute_context              Dummy-1   11:32:17 812.0296001434326 show standard_conforming_strings
+     28944    20       INFO _execute_context              Dummy-1   11:32:17 812.1640682220459 [raw sql] {}
+     28944    20       INFO _begin_impl              Dummy-1   11:32:17 812.6370906829834 BEGIN (implicit)
+     28944    20       INFO _execute_context              Dummy-1   11:32:17 813.5285377502441 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     28944    20       INFO _execute_context              Dummy-1   11:32:17 813.7116432189941 [generated in 0.00030s] {'name': 'imdb_info_two'}
+     28944    20       INFO _commit_impl              Dummy-1   11:32:17 814.9511814117432     COMMIT
+     28944    30    WARNING log_response             Thread-2   11:32:43 873.6622333526611 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     28944    30    WARNING log_response             Thread-2   11:32:48 412.77313232421875 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     28944    30    WARNING log_response             Thread-4   11:32:52 950.7086277008057 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     29139    20       INFO get_engine              Dummy-1   11:33:58 253.47042083740234 engine created
+     29139    20       INFO _execute_context              Dummy-1   11:33:58 262.5257968902588 select pg_catalog.version()
+     29139    20       INFO _execute_context              Dummy-1   11:33:58 262.92943954467773 [raw sql] {}
+     29139    20       INFO _execute_context              Dummy-1   11:33:58 263.93890380859375 select current_schema()
+     29139    20       INFO _execute_context              Dummy-1   11:33:58 264.16921615600586 [raw sql] {}
+     29139    20       INFO _execute_context              Dummy-1   11:33:58 264.89877700805664 show standard_conforming_strings
+     29139    20       INFO _execute_context              Dummy-1   11:33:58 265.1057243347168 [raw sql] {}
+     29139    20       INFO _begin_impl              Dummy-1   11:33:58 265.9573554992676 BEGIN (implicit)
+     29139    20       INFO _execute_context              Dummy-1   11:33:58 267.488956451416 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29139    20       INFO _execute_context              Dummy-1   11:33:58 267.667293548584 [generated in 0.00033s] {'name': 'imdb_info_two'}
+     29139    20       INFO _commit_impl              Dummy-1   11:33:58 269.1845893859863     COMMIT
+     29139    30    WARNING log_response             Thread-2   11:36:27 919.9626445770264 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     30329    20       INFO get_engine              Dummy-1   11:45:51 671.4897155761719 engine created
+     30329    20       INFO _execute_context              Dummy-1   11:45:51 707.399845123291 select pg_catalog.version()
+     30329    20       INFO _execute_context              Dummy-1   11:45:51 707.7484130859375 [raw sql] {}
+     30329    20       INFO _execute_context              Dummy-1   11:45:51 709.2270851135254 select current_schema()
+     30329    20       INFO _execute_context              Dummy-1   11:45:51 709.6211910247803 [raw sql] {}
+     30329    20       INFO _execute_context              Dummy-1   11:45:51 711.1568450927734 show standard_conforming_strings
+     30329    20       INFO _execute_context              Dummy-1   11:45:51 711.7505073547363 [raw sql] {}
+     30329    20       INFO _begin_impl              Dummy-1   11:45:51 712.9018306732178 BEGIN (implicit)
+     30329    20       INFO _execute_context              Dummy-1   11:45:51 714.6263122558594 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     30329    20       INFO _execute_context              Dummy-1   11:45:51 714.9603366851807 [generated in 0.00052s] {'name': 'imdb_info_two'}
+     30329    20       INFO _commit_impl              Dummy-1   11:45:51 717.0214653015137     COMMIT
+     30329    30    WARNING log_response             Thread-2   11:46:40 177.62446403503418 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     30329    30    WARNING log_response             Thread-2   11:46:40 187.7448558807373 Not Found: /favicon.ico
+     30329    30    WARNING log_response             Thread-2   11:46:45 224.89237785339355 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     30329    30    WARNING log_response             Thread-2   11:46:53 968.0850505828857 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     30329    30    WARNING log_response             Thread-2   11:47:39 372.4987506866455 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     30329    30    WARNING log_response             Thread-2   11:47:46 296.5056896209717 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     30803    20       INFO get_engine              Dummy-1   11:49:47 212.82625198364258 engine created
+     30803    20       INFO _execute_context              Dummy-1   11:49:47 223.64401817321777 select pg_catalog.version()
+     30803    20       INFO _execute_context              Dummy-1   11:49:47 223.86765480041504 [raw sql] {}
+     30803    20       INFO _execute_context              Dummy-1   11:49:47 224.60603713989258 select current_schema()
+     30803    20       INFO _execute_context              Dummy-1   11:49:47 224.70903396606445 [raw sql] {}
+     30803    20       INFO _execute_context              Dummy-1   11:49:47 225.14033317565918 show standard_conforming_strings
+     30803    20       INFO _execute_context              Dummy-1   11:49:47 225.22544860839844 [raw sql] {}
+     30803    20       INFO _begin_impl              Dummy-1   11:49:47 225.56591033935547 BEGIN (implicit)
+     30803    20       INFO _execute_context              Dummy-1   11:49:47 226.40752792358398 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     30803    20       INFO _execute_context              Dummy-1   11:49:47 226.50480270385742 [generated in 0.00017s] {'name': 'imdb_info_two'}
+     30803    20       INFO _commit_impl              Dummy-1   11:49:47 227.53643989562988     COMMIT
+     30803    30    WARNING log_response             Thread-3   11:54:54 275.52032470703125 Not Found: /
+     33418    20       INFO get_engine              Dummy-1   12:21:50 930.4695129394531 engine created
+     33418    20       INFO _execute_context              Dummy-1   12:21:50 980.5641174316406 select pg_catalog.version()
+     33418    20       INFO _execute_context              Dummy-1   12:21:50 980.8428287506104 [raw sql] {}
+     33418    20       INFO _execute_context              Dummy-1   12:21:50 981.64963722229 select current_schema()
+     33418    20       INFO _execute_context              Dummy-1   12:21:50 981.8048477172852 [raw sql] {}
+     33418    20       INFO _execute_context              Dummy-1   12:21:50 982.4490547180176 show standard_conforming_strings
+     33418    20       INFO _execute_context              Dummy-1   12:21:50 982.5971126556396 [raw sql] {}
+     33418    20       INFO _begin_impl              Dummy-1   12:21:50 983.1538200378418 BEGIN (implicit)
+     33418    20       INFO _execute_context              Dummy-1   12:21:50 984.2221736907959 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     33418    20       INFO _execute_context              Dummy-1   12:21:50 984.4000339508057 [generated in 0.00029s] {'name': 'imdb_info_two'}
+     33418    20       INFO _commit_impl              Dummy-1   12:21:50 985.7590198516846     COMMIT
+     33431    20       INFO get_engine              Dummy-1   12:21:54 305.1137924194336 engine created
+     33431    20       INFO _execute_context              Dummy-1   12:21:54 311.53035163879395 select pg_catalog.version()
+     33431    20       INFO _execute_context              Dummy-1   12:21:54 311.6781711578369 [raw sql] {}
+     33431    20       INFO _execute_context              Dummy-1   12:21:54 312.15667724609375 select current_schema()
+     33431    20       INFO _execute_context              Dummy-1   12:21:54 312.24608421325684 [raw sql] {}
+     33431    20       INFO _execute_context              Dummy-1   12:21:54 312.65759468078613 show standard_conforming_strings
+     33431    20       INFO _execute_context              Dummy-1   12:21:54 312.7570152282715 [raw sql] {}
+     33431    20       INFO _begin_impl              Dummy-1   12:21:54 313.04192543029785 BEGIN (implicit)
+     33431    20       INFO _execute_context              Dummy-1   12:21:54 313.60459327697754 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     33431    20       INFO _execute_context              Dummy-1   12:21:54 313.709020614624 [generated in 0.00016s] {'name': 'imdb_info_two'}
+     33431    20       INFO _commit_impl              Dummy-1   12:21:54 314.54968452453613     COMMIT
+     33443    20       INFO get_engine              Dummy-1   12:22:10 140.67959785461426 engine created
+     33443    20       INFO _execute_context              Dummy-1   12:22:10 146.00038528442383 select pg_catalog.version()
+     33443    20       INFO _execute_context              Dummy-1   12:22:10 146.14129066467285 [raw sql] {}
+     33443    20       INFO _execute_context              Dummy-1   12:22:10 146.6085910797119 select current_schema()
+     33443    20       INFO _execute_context              Dummy-1   12:22:10 146.73256874084473 [raw sql] {}
+     33443    20       INFO _execute_context              Dummy-1   12:22:10 147.0320224761963 show standard_conforming_strings
+     33443    20       INFO _execute_context              Dummy-1   12:22:10 147.09711074829102 [raw sql] {}
+     33443    20       INFO _begin_impl              Dummy-1   12:22:10 147.3395824432373 BEGIN (implicit)
+     33443    20       INFO _execute_context              Dummy-1   12:22:10 147.8271484375 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     33443    20       INFO _execute_context              Dummy-1   12:22:10 147.91011810302734 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     33443    20       INFO _commit_impl              Dummy-1   12:22:10 148.50783348083496     COMMIT
+     33540    20       INFO get_engine              Dummy-1   12:23:01 506.7791938781738 engine created
+     33540    20       INFO _execute_context              Dummy-1   12:23:01 512.5229358673096 select pg_catalog.version()
+     33540    20       INFO _execute_context              Dummy-1   12:23:01 512.6953125 [raw sql] {}
+     33540    20       INFO _execute_context              Dummy-1   12:23:01 513.1428241729736 select current_schema()
+     33540    20       INFO _execute_context              Dummy-1   12:23:01 513.2186412811279 [raw sql] {}
+     33540    20       INFO _execute_context              Dummy-1   12:23:01 513.526201248169 show standard_conforming_strings
+     33540    20       INFO _execute_context              Dummy-1   12:23:01 513.5912895202637 [raw sql] {}
+     33540    20       INFO _begin_impl              Dummy-1   12:23:01 513.8535499572754 BEGIN (implicit)
+     33540    20       INFO _execute_context              Dummy-1   12:23:01 514.3954753875732 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     33540    20       INFO _execute_context              Dummy-1   12:23:01 514.4846439361572 [generated in 0.00014s] {'name': 'imdb_info_two'}
+     33540    20       INFO _commit_impl              Dummy-1   12:23:01 515.178918838501     COMMIT
+     33540    30    WARNING log_response             Thread-2   12:24:08 639.5184993743896 Not Found: /
+     37281    20       INFO get_engine              Dummy-1   13:05:20 912.3775959014893 engine created
+     37281    20       INFO _execute_context              Dummy-1   13:05:20 994.4655895233154 select pg_catalog.version()
+     37281    20       INFO _execute_context              Dummy-1   13:05:20 994.7342872619629 [raw sql] {}
+     37281    20       INFO _execute_context              Dummy-1   13:05:20 995.6037998199463 select current_schema()
+     37281    20       INFO _execute_context              Dummy-1   13:05:20 995.8024024963379 [raw sql] {}
+     37281    20       INFO _execute_context              Dummy-1   13:05:20 997.1413612365723 show standard_conforming_strings
+     37281    20       INFO _execute_context              Dummy-1   13:05:20 997.5228309631348 [raw sql] {}
+     37281    20       INFO _begin_impl              Dummy-1   13:05:20 998.9557266235352 BEGIN (implicit)
+     37281    20       INFO _execute_context              Dummy-1   13:05:21 0.6041526794433594 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     37281    20       INFO _execute_context              Dummy-1   13:05:21 0.9195804595947266 [generated in 0.00054s] {'name': 'imdb_info_two'}
+     37281    20       INFO _commit_impl              Dummy-1   13:05:21 2.8836727142333984     COMMIT
+     37335    20       INFO get_engine              Dummy-1   13:05:57 20.017385482788086 engine created
+     37335    20       INFO _execute_context              Dummy-1   13:05:57 26.832103729248047 select pg_catalog.version()
+     37335    20       INFO _execute_context              Dummy-1   13:05:57 27.037620544433594 [raw sql] {}
+     37335    20       INFO _execute_context              Dummy-1   13:05:57 27.734994888305664 select current_schema()
+     37335    20       INFO _execute_context              Dummy-1   13:05:57 27.890682220458984 [raw sql] {}
+     37335    20       INFO _execute_context              Dummy-1   13:05:57 28.436660766601562 show standard_conforming_strings
+     37335    20       INFO _execute_context              Dummy-1   13:05:57 28.569698333740234 [raw sql] {}
+     37335    20       INFO _begin_impl              Dummy-1   13:05:57 28.935670852661133 BEGIN (implicit)
+     37335    20       INFO _execute_context              Dummy-1   13:05:57 29.57916259765625 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     37335    20       INFO _execute_context              Dummy-1   13:05:57 29.70266342163086 [generated in 0.00018s] {'name': 'imdb_info_two'}
+     37335    20       INFO _commit_impl              Dummy-1   13:05:57 30.703306198120117     COMMIT
+     37419    20       INFO get_engine              Dummy-1   13:06:49 366.5294647216797 engine created
+     37419    20       INFO _execute_context              Dummy-1   13:06:49 372.3165988922119 select pg_catalog.version()
+     37419    20       INFO _execute_context              Dummy-1   13:06:49 372.4546432495117 [raw sql] {}
+     37419    20       INFO _execute_context              Dummy-1   13:06:49 372.82872200012207 select current_schema()
+     37419    20       INFO _execute_context              Dummy-1   13:06:49 372.9054927825928 [raw sql] {}
+     37419    20       INFO _execute_context              Dummy-1   13:06:49 373.16393852233887 show standard_conforming_strings
+     37419    20       INFO _execute_context              Dummy-1   13:06:49 373.22044372558594 [raw sql] {}
+     37419    20       INFO _begin_impl              Dummy-1   13:06:49 373.427152633667 BEGIN (implicit)
+     37419    20       INFO _execute_context              Dummy-1   13:06:49 373.8870620727539 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     37419    20       INFO _execute_context              Dummy-1   13:06:49 373.9743232727051 [generated in 0.00014s] {'name': 'imdb_info_two'}
+     37419    20       INFO _commit_impl              Dummy-1   13:06:49 374.56393241882324     COMMIT
+     37433    20       INFO get_engine              Dummy-1   13:07:04 172.26529121398926 engine created
+     37433    20       INFO _execute_context              Dummy-1   13:07:04 177.97279357910156 select pg_catalog.version()
+     37433    20       INFO _execute_context              Dummy-1   13:07:04 178.1022548675537 [raw sql] {}
+     37433    20       INFO _execute_context              Dummy-1   13:07:04 178.4522533416748 select current_schema()
+     37433    20       INFO _execute_context              Dummy-1   13:07:04 178.52187156677246 [raw sql] {}
+     37433    20       INFO _execute_context              Dummy-1   13:07:04 178.76696586608887 show standard_conforming_strings
+     37433    20       INFO _execute_context              Dummy-1   13:07:04 178.82013320922852 [raw sql] {}
+     37433    20       INFO _begin_impl              Dummy-1   13:07:04 179.05306816101074 BEGIN (implicit)
+     37433    20       INFO _execute_context              Dummy-1   13:07:04 179.51226234436035 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     37433    20       INFO _execute_context              Dummy-1   13:07:04 179.58712577819824 [generated in 0.00012s] {'name': 'imdb_info_two'}
+     37433    20       INFO _commit_impl              Dummy-1   13:07:04 180.2675724029541     COMMIT
+     37733    20       INFO get_engine              Dummy-1   13:11:13 745.1319694519043 engine created
+     37733    20       INFO _execute_context              Dummy-1   13:11:13 750.2007484436035 select pg_catalog.version()
+     37733    20       INFO _execute_context              Dummy-1   13:11:13 750.3359317779541 [raw sql] {}
+     37733    20       INFO _execute_context              Dummy-1   13:11:13 750.7517337799072 select current_schema()
+     37733    20       INFO _execute_context              Dummy-1   13:11:13 750.8251667022705 [raw sql] {}
+     37733    20       INFO _execute_context              Dummy-1   13:11:13 751.0671615600586 show standard_conforming_strings
+     37733    20       INFO _execute_context              Dummy-1   13:11:13 751.1203289031982 [raw sql] {}
+     37733    20       INFO _begin_impl              Dummy-1   13:11:13 751.3465881347656 BEGIN (implicit)
+     37733    20       INFO _execute_context              Dummy-1   13:11:13 751.8405914306641 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     37733    20       INFO _execute_context              Dummy-1   13:11:13 751.9049644470215 [generated in 0.00012s] {'name': 'imdb_info_two'}
+     37733    20       INFO _commit_impl              Dummy-1   13:11:13 752.4874210357666     COMMIT
+     37802    20       INFO get_engine              Dummy-1   13:11:48 831.7244052886963 engine created
+     37802    20       INFO _execute_context              Dummy-1   13:11:48 837.1195793151855 select pg_catalog.version()
+     37802    20       INFO _execute_context              Dummy-1   13:11:48 837.2693061828613 [raw sql] {}
+     37802    20       INFO _execute_context              Dummy-1   13:11:48 837.6543521881104 select current_schema()
+     37802    20       INFO _execute_context              Dummy-1   13:11:48 837.7687931060791 [raw sql] {}
+     37802    20       INFO _execute_context              Dummy-1   13:11:48 838.0527496337891 show standard_conforming_strings
+     37802    20       INFO _execute_context              Dummy-1   13:11:48 838.1123542785645 [raw sql] {}
+     37802    20       INFO _begin_impl              Dummy-1   13:11:48 838.3526802062988 BEGIN (implicit)
+     37802    20       INFO _execute_context              Dummy-1   13:11:48 838.9074802398682 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     37802    20       INFO _execute_context              Dummy-1   13:11:48 839.0252590179443 [generated in 0.00017s] {'name': 'imdb_info_two'}
+     37802    20       INFO _commit_impl              Dummy-1   13:11:48 839.6966457366943     COMMIT
+     37809    20       INFO get_engine              Dummy-1   13:11:50 543.9300537109375 engine created
+     37809    20       INFO _execute_context              Dummy-1   13:11:50 550.9676933288574 select pg_catalog.version()
+     37809    20       INFO _execute_context              Dummy-1   13:11:50 551.1646270751953 [raw sql] {}
+     37809    20       INFO _execute_context              Dummy-1   13:11:50 551.7280101776123 select current_schema()
+     37809    20       INFO _execute_context              Dummy-1   13:11:50 551.8190860748291 [raw sql] {}
+     37809    20       INFO _execute_context              Dummy-1   13:11:50 552.3314476013184 show standard_conforming_strings
+     37809    20       INFO _execute_context              Dummy-1   13:11:50 552.4787902832031 [raw sql] {}
+     37809    20       INFO _begin_impl              Dummy-1   13:11:50 552.9308319091797 BEGIN (implicit)
+     37809    20       INFO _execute_context              Dummy-1   13:11:50 553.7066459655762 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     37809    20       INFO _execute_context              Dummy-1   13:11:50 553.8887977600098 [generated in 0.00029s] {'name': 'imdb_info_two'}
+     37809    20       INFO _commit_impl              Dummy-1   13:11:50 554.9123287200928     COMMIT
+     37816    20       INFO get_engine              Dummy-1   13:11:57 216.32003784179688 engine created
+     37816    20       INFO _execute_context              Dummy-1   13:11:57 222.05424308776855 select pg_catalog.version()
+     37816    20       INFO _execute_context              Dummy-1   13:11:57 222.18799591064453 [raw sql] {}
+     37816    20       INFO _execute_context              Dummy-1   13:11:57 222.55849838256836 select current_schema()
+     37816    20       INFO _execute_context              Dummy-1   13:11:57 222.63050079345703 [raw sql] {}
+     37816    20       INFO _execute_context              Dummy-1   13:11:57 222.94878959655762 show standard_conforming_strings
+     37816    20       INFO _execute_context              Dummy-1   13:11:57 223.01411628723145 [raw sql] {}
+     37816    20       INFO _begin_impl              Dummy-1   13:11:57 223.2353687286377 BEGIN (implicit)
+     37816    20       INFO _execute_context              Dummy-1   13:11:57 223.7260341644287 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     37816    20       INFO _execute_context              Dummy-1   13:11:57 223.8011360168457 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     37816    20       INFO _commit_impl              Dummy-1   13:11:57 224.41911697387695     COMMIT
+     37833    20       INFO get_engine              Dummy-1   13:12:19 156.1727523803711 engine created
+     37833    20       INFO _execute_context              Dummy-1   13:12:19 162.12821006774902 select pg_catalog.version()
+     37833    20       INFO _execute_context              Dummy-1   13:12:19 162.2624397277832 [raw sql] {}
+     37833    20       INFO _execute_context              Dummy-1   13:12:19 162.63771057128906 select current_schema()
+     37833    20       INFO _execute_context              Dummy-1   13:12:19 162.70780563354492 [raw sql] {}
+     37833    20       INFO _execute_context              Dummy-1   13:12:19 162.97292709350586 show standard_conforming_strings
+     37833    20       INFO _execute_context              Dummy-1   13:12:19 163.0258560180664 [raw sql] {}
+     37833    20       INFO _begin_impl              Dummy-1   13:12:19 163.24090957641602 BEGIN (implicit)
+     37833    20       INFO _execute_context              Dummy-1   13:12:19 163.79642486572266 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     37833    20       INFO _execute_context              Dummy-1   13:12:19 163.8631820678711 [generated in 0.00012s] {'name': 'imdb_info_two'}
+     37833    20       INFO _commit_impl              Dummy-1   13:12:19 164.48521614074707     COMMIT
+     37833    20       INFO        get             Thread-2   13:15:18 107.6059341430664 session started
+     37833    20       INFO _begin_impl             Thread-2   13:15:18 109.72356796264648 BEGIN (implicit)
+     37833    20       INFO _execute_context             Thread-2   13:15:18 113.19637298583984 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     37833    20       INFO _execute_context             Thread-2   13:15:18 113.48819732666016 [generated in 0.00040s] {}
+     37833    10      DEBUG        get             Thread-2   13:15:18 265.6121253967285 ['Stanley Kubrick']
+     37833    20       INFO _commit_impl             Thread-2   13:15:18 265.8097743988037     COMMIT
+     37833    20       INFO        get             Thread-2   13:15:18 266.28637313842773 session committed
+     37833    20       INFO        get             Thread-2   13:15:18 266.6037082672119 session closed
+     37833    20       INFO        get             Thread-2   13:15:18 456.4173221588135 session started
+     37833    20       INFO _begin_impl             Thread-2   13:15:18 457.02481269836426 BEGIN (implicit)
+     37833    20       INFO _execute_context             Thread-2   13:15:18 457.4291706085205 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     37833    20       INFO _execute_context             Thread-2   13:15:18 457.5831890106201 [cached since 0.3445s ago] {}
+     37833    10      DEBUG        get             Thread-2   13:15:18 483.8063716888428 ['Stanley Kubrick']
+     37833    20       INFO _commit_impl             Thread-2   13:15:18 484.0226173400879     COMMIT
+     37833    20       INFO        get             Thread-2   13:15:18 484.3318462371826 session committed
+     37833    20       INFO        get             Thread-2   13:15:18 484.53211784362793 session closed
+     37833    20       INFO        get             Thread-3   13:16:37 271.8930244445801 session started
+     37833    20       INFO _begin_impl             Thread-3   13:16:37 272.2055912017822 BEGIN (implicit)
+     37833    20       INFO _execute_context             Thread-3   13:16:37 272.4723815917969 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     37833    20       INFO _execute_context             Thread-3   13:16:37 272.58825302124023 [cached since 79.16s ago] {}
+     37833    10      DEBUG        get             Thread-3   13:16:37 297.88732528686523 ['Stanley Kubrick']
+     37833    20       INFO _commit_impl             Thread-3   13:16:37 298.1712818145752     COMMIT
+     37833    20       INFO        get             Thread-3   13:16:37 298.6774444580078 session committed
+     37833    20       INFO        get             Thread-3   13:16:37 298.88272285461426 session closed
+     37833    20       INFO        get             Thread-3   13:16:38 312.41726875305176 session started
+     37833    20       INFO _begin_impl             Thread-3   13:16:38 312.99376487731934 BEGIN (implicit)
+     37833    20       INFO _execute_context             Thread-3   13:16:38 313.3997917175293 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     37833    20       INFO _execute_context             Thread-3   13:16:38 313.5554790496826 [cached since 80.2s ago] {}
+     37833    10      DEBUG        get             Thread-3   13:16:38 342.68808364868164 ['Stanley Kubrick']
+     37833    20       INFO _commit_impl             Thread-3   13:16:38 342.8614139556885     COMMIT
+     37833    20       INFO        get             Thread-3   13:16:38 343.28579902648926 session committed
+     37833    20       INFO        get             Thread-3   13:16:38 343.5373306274414 session closed
+     38316    20       INFO get_engine              Dummy-1   13:17:27 463.7911319732666 engine created
+     38316    20       INFO _execute_context              Dummy-1   13:17:27 469.56682205200195 select pg_catalog.version()
+     38316    20       INFO _execute_context              Dummy-1   13:17:27 469.7544574737549 [raw sql] {}
+     38316    20       INFO _execute_context              Dummy-1   13:17:27 470.34358978271484 select current_schema()
+     38316    20       INFO _execute_context              Dummy-1   13:17:27 470.46709060668945 [raw sql] {}
+     38316    20       INFO _execute_context              Dummy-1   13:17:27 470.84760665893555 show standard_conforming_strings
+     38316    20       INFO _execute_context              Dummy-1   13:17:27 470.9651470184326 [raw sql] {}
+     38316    20       INFO _begin_impl              Dummy-1   13:17:27 471.238374710083 BEGIN (implicit)
+     38316    20       INFO _execute_context              Dummy-1   13:17:27 471.86851501464844 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     38316    20       INFO _execute_context              Dummy-1   13:17:27 471.9371795654297 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     38316    20       INFO _commit_impl              Dummy-1   13:17:27 472.61834144592285     COMMIT
+     38316    30    WARNING log_response             Thread-2   13:17:33 823.925256729126 Not Found: /accounts/login/
+     38430    20       INFO get_engine              Dummy-1   13:18:07 579.1215896606445 engine created
+     38430    20       INFO _execute_context              Dummy-1   13:18:07 584.2819213867188 select pg_catalog.version()
+     38430    20       INFO _execute_context              Dummy-1   13:18:07 584.4089984893799 [raw sql] {}
+     38430    20       INFO _execute_context              Dummy-1   13:18:07 584.7229957580566 select current_schema()
+     38430    20       INFO _execute_context              Dummy-1   13:18:07 584.7842693328857 [raw sql] {}
+     38430    20       INFO _execute_context              Dummy-1   13:18:07 585.0181579589844 show standard_conforming_strings
+     38430    20       INFO _execute_context              Dummy-1   13:18:07 585.068941116333 [raw sql] {}
+     38430    20       INFO _begin_impl              Dummy-1   13:18:07 585.2682590484619 BEGIN (implicit)
+     38430    20       INFO _execute_context              Dummy-1   13:18:07 585.7219696044922 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     38430    20       INFO _execute_context              Dummy-1   13:18:07 585.7894420623779 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     38430    20       INFO _commit_impl              Dummy-1   13:18:07 586.3418579101562     COMMIT
+     38430    40      ERROR log_response             Thread-2   13:18:09 688.0061626434326 Internal Server Error: /api/IMDBApp/get/director/with/max/number/of/movies/
+Traceback (most recent call last):
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'GetDirectorWithMaxNumberOfMovies' object has no attribute 'user'
+     38509    20       INFO get_engine              Dummy-1   13:18:16 400.4998207092285 engine created
+     38509    20       INFO _execute_context              Dummy-1   13:18:16 407.4678421020508 select pg_catalog.version()
+     38509    20       INFO _execute_context              Dummy-1   13:18:16 407.667875289917 [raw sql] {}
+     38509    20       INFO _execute_context              Dummy-1   13:18:16 408.2813262939453 select current_schema()
+     38509    20       INFO _execute_context              Dummy-1   13:18:16 408.4601402282715 [raw sql] {}
+     38509    20       INFO _execute_context              Dummy-1   13:18:16 408.9643955230713 show standard_conforming_strings
+     38509    20       INFO _execute_context              Dummy-1   13:18:16 409.1010093688965 [raw sql] {}
+     38509    20       INFO _begin_impl              Dummy-1   13:18:16 409.58690643310547 BEGIN (implicit)
+     38509    20       INFO _execute_context              Dummy-1   13:18:16 410.30216217041016 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     38509    20       INFO _execute_context              Dummy-1   13:18:16 410.4588031768799 [generated in 0.00021s] {'name': 'imdb_info_two'}
+     38509    20       INFO _commit_impl              Dummy-1   13:18:16 411.41510009765625     COMMIT
+     38509    30    WARNING log_response             Thread-2   13:18:17 975.3715991973877 Not Found: /accounts/login/
+     38654    20       INFO get_engine              Dummy-1   13:18:52 523.6032009124756 engine created
+     38654    20       INFO _execute_context              Dummy-1   13:18:52 528.5665988922119 select pg_catalog.version()
+     38654    20       INFO _execute_context              Dummy-1   13:18:52 528.8054943084717 [raw sql] {}
+     38654    20       INFO _execute_context              Dummy-1   13:18:52 529.1640758514404 select current_schema()
+     38654    20       INFO _execute_context              Dummy-1   13:18:52 529.2403697967529 [raw sql] {}
+     38654    20       INFO _execute_context              Dummy-1   13:18:52 529.4904708862305 show standard_conforming_strings
+     38654    20       INFO _execute_context              Dummy-1   13:18:52 529.5498371124268 [raw sql] {}
+     38654    20       INFO _begin_impl              Dummy-1   13:18:52 529.7632217407227 BEGIN (implicit)
+     38654    20       INFO _execute_context              Dummy-1   13:18:52 530.2293300628662 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     38654    20       INFO _execute_context              Dummy-1   13:18:52 530.3041934967041 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     38654    20       INFO _commit_impl              Dummy-1   13:18:52 530.9116840362549     COMMIT
+     38718    20       INFO get_engine              Dummy-1   13:19:30 567.2318935394287 engine created
+     38718    20       INFO _execute_context              Dummy-1   13:19:30 572.7999210357666 select pg_catalog.version()
+     38718    20       INFO _execute_context              Dummy-1   13:19:30 572.9539394378662 [raw sql] {}
+     38718    20       INFO _execute_context              Dummy-1   13:19:30 573.3168125152588 select current_schema()
+     38718    20       INFO _execute_context              Dummy-1   13:19:30 573.3788013458252 [raw sql] {}
+     38718    20       INFO _execute_context              Dummy-1   13:19:30 573.6119747161865 show standard_conforming_strings
+     38718    20       INFO _execute_context              Dummy-1   13:19:30 573.662519454956 [raw sql] {}
+     38718    20       INFO _begin_impl              Dummy-1   13:19:30 573.8644599914551 BEGIN (implicit)
+     38718    20       INFO _execute_context              Dummy-1   13:19:30 574.3117332458496 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     38718    20       INFO _execute_context              Dummy-1   13:19:30 574.3982791900635 [generated in 0.00014s] {'name': 'imdb_info_two'}
+     38718    20       INFO _commit_impl              Dummy-1   13:19:30 574.9588012695312     COMMIT
+     39904    20       INFO get_engine              Dummy-1   13:31:14 28.749465942382812 engine created
+     39904    20       INFO _execute_context              Dummy-1   13:31:14 33.646345138549805 select pg_catalog.version()
+     39904    20       INFO _execute_context              Dummy-1   13:31:14 33.77723693847656 [raw sql] {}
+     39904    20       INFO _execute_context              Dummy-1   13:31:14 34.11555290222168 select current_schema()
+     39904    20       INFO _execute_context              Dummy-1   13:31:14 34.18540954589844 [raw sql] {}
+     39904    20       INFO _execute_context              Dummy-1   13:31:14 34.48820114135742 show standard_conforming_strings
+     39904    20       INFO _execute_context              Dummy-1   13:31:14 34.549713134765625 [raw sql] {}
+     39904    20       INFO _begin_impl              Dummy-1   13:31:14 34.777164459228516 BEGIN (implicit)
+     39904    20       INFO _execute_context              Dummy-1   13:31:14 35.23755073547363 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     39904    20       INFO _execute_context              Dummy-1   13:31:14 35.3245735168457 [generated in 0.00014s] {'name': 'imdb_info_two'}
+     39904    20       INFO _commit_impl              Dummy-1   13:31:14 36.06677055358887     COMMIT
+     40099    20       INFO get_engine              Dummy-1   13:32:36 867.3124313354492 engine created
+     40099    20       INFO _execute_context              Dummy-1   13:32:36 873.2266426086426 select pg_catalog.version()
+     40099    20       INFO _execute_context              Dummy-1   13:32:36 873.450517654419 [raw sql] {}
+     40099    20       INFO _execute_context              Dummy-1   13:32:36 874.2976188659668 select current_schema()
+     40099    20       INFO _execute_context              Dummy-1   13:32:36 874.5794296264648 [raw sql] {}
+     40099    20       INFO _execute_context              Dummy-1   13:32:36 875.4050731658936 show standard_conforming_strings
+     40099    20       INFO _execute_context              Dummy-1   13:32:36 875.5745887756348 [raw sql] {}
+     40099    20       INFO _begin_impl              Dummy-1   13:32:36 876.2803077697754 BEGIN (implicit)
+     40099    20       INFO _execute_context              Dummy-1   13:32:36 876.9824504852295 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     40099    20       INFO _execute_context              Dummy-1   13:32:36 877.213716506958 [generated in 0.00030s] {'name': 'imdb_info_two'}
+     40099    20       INFO _commit_impl              Dummy-1   13:32:36 878.2219886779785     COMMIT
+     40131    20       INFO get_engine              Dummy-1   13:32:40 453.71389389038086 engine created
+     40131    20       INFO _execute_context              Dummy-1   13:32:40 458.81032943725586 select pg_catalog.version()
+     40131    20       INFO _execute_context              Dummy-1   13:32:40 458.9354991912842 [raw sql] {}
+     40131    20       INFO _execute_context              Dummy-1   13:32:40 459.29431915283203 select current_schema()
+     40131    20       INFO _execute_context              Dummy-1   13:32:40 459.35750007629395 [raw sql] {}
+     40131    20       INFO _execute_context              Dummy-1   13:32:40 459.60545539855957 show standard_conforming_strings
+     40131    20       INFO _execute_context              Dummy-1   13:32:40 459.66243743896484 [raw sql] {}
+     40131    20       INFO _begin_impl              Dummy-1   13:32:40 459.9006175994873 BEGIN (implicit)
+     40131    20       INFO _execute_context              Dummy-1   13:32:40 460.3559970855713 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     40131    20       INFO _execute_context              Dummy-1   13:32:40 460.4296684265137 [generated in 0.00012s] {'name': 'imdb_info_two'}
+     40131    20       INFO _commit_impl              Dummy-1   13:32:40 461.0180854797363     COMMIT
+     40292    20       INFO get_engine              Dummy-1   13:33:39 751.7349720001221 engine created
+     40292    20       INFO _execute_context              Dummy-1   13:33:39 756.6096782684326 select pg_catalog.version()
+     40292    20       INFO _execute_context              Dummy-1   13:33:39 756.732702255249 [raw sql] {}
+     40292    20       INFO _execute_context              Dummy-1   13:33:39 757.1313381195068 select current_schema()
+     40292    20       INFO _execute_context              Dummy-1   13:33:39 757.2126388549805 [raw sql] {}
+     40292    20       INFO _execute_context              Dummy-1   13:33:39 757.5113773345947 show standard_conforming_strings
+     40292    20       INFO _execute_context              Dummy-1   13:33:39 757.5790882110596 [raw sql] {}
+     40292    20       INFO _begin_impl              Dummy-1   13:33:39 757.8451633453369 BEGIN (implicit)
+     40292    20       INFO _execute_context              Dummy-1   13:33:39 758.3165168762207 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     40292    20       INFO _execute_context              Dummy-1   13:33:39 758.4004402160645 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     40292    20       INFO _commit_impl              Dummy-1   13:33:39 759.0057849884033     COMMIT
+     40292    30    WARNING log_response             Thread-2   13:34:08 265.0573253631592 Not Found: /
+     40703    20       INFO get_engine              Dummy-1   13:36:12 520.272970199585 engine created
+     40703    20       INFO _execute_context              Dummy-1   13:36:12 526.517391204834 select pg_catalog.version()
+     40703    20       INFO _execute_context              Dummy-1   13:36:12 526.6907215118408 [raw sql] {}
+     40703    20       INFO _execute_context              Dummy-1   13:36:12 527.1434783935547 select current_schema()
+     40703    20       INFO _execute_context              Dummy-1   13:36:12 527.2369384765625 [raw sql] {}
+     40703    20       INFO _execute_context              Dummy-1   13:36:12 527.7974605560303 show standard_conforming_strings
+     40703    20       INFO _execute_context              Dummy-1   13:36:12 527.8885364532471 [raw sql] {}
+     40703    20       INFO _begin_impl              Dummy-1   13:36:12 528.13720703125 BEGIN (implicit)
+     40703    20       INFO _execute_context              Dummy-1   13:36:12 528.6266803741455 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     40703    20       INFO _execute_context              Dummy-1   13:36:12 528.6951065063477 [generated in 0.00012s] {'name': 'imdb_info_two'}
+     40703    20       INFO _commit_impl              Dummy-1   13:36:12 529.3483734130859     COMMIT
+     40718    20       INFO get_engine              Dummy-1   13:36:22 261.46674156188965 engine created
+     40718    20       INFO _execute_context              Dummy-1   13:36:22 266.36528968811035 select pg_catalog.version()
+     40718    20       INFO _execute_context              Dummy-1   13:36:22 266.4976119995117 [raw sql] {}
+     40718    20       INFO _execute_context              Dummy-1   13:36:22 266.9029235839844 select current_schema()
+     40718    20       INFO _execute_context              Dummy-1   13:36:22 266.97278022766113 [raw sql] {}
+     40718    20       INFO _execute_context              Dummy-1   13:36:22 267.31157302856445 show standard_conforming_strings
+     40718    20       INFO _execute_context              Dummy-1   13:36:22 267.3802375793457 [raw sql] {}
+     40718    20       INFO _begin_impl              Dummy-1   13:36:22 267.62914657592773 BEGIN (implicit)
+     40718    20       INFO _execute_context              Dummy-1   13:36:22 268.08857917785645 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     40718    20       INFO _execute_context              Dummy-1   13:36:22 268.1589126586914 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     40718    20       INFO _commit_impl              Dummy-1   13:36:22 268.765926361084     COMMIT
+     40755    20       INFO get_engine              Dummy-1   13:36:38 94.77806091308594 engine created
+     40755    20       INFO _execute_context              Dummy-1   13:36:38 100.12340545654297 select pg_catalog.version()
+     40755    20       INFO _execute_context              Dummy-1   13:36:38 100.26121139526367 [raw sql] {}
+     40755    20       INFO _execute_context              Dummy-1   13:36:38 100.65865516662598 select current_schema()
+     40755    20       INFO _execute_context              Dummy-1   13:36:38 100.74591636657715 [raw sql] {}
+     40755    20       INFO _execute_context              Dummy-1   13:36:38 101.07803344726562 show standard_conforming_strings
+     40755    20       INFO _execute_context              Dummy-1   13:36:38 101.15408897399902 [raw sql] {}
+     40755    20       INFO _begin_impl              Dummy-1   13:36:38 101.40872001647949 BEGIN (implicit)
+     40755    20       INFO _execute_context              Dummy-1   13:36:38 101.90105438232422 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     40755    20       INFO _execute_context              Dummy-1   13:36:38 101.98783874511719 [generated in 0.00015s] {'name': 'imdb_info_two'}
+     40755    20       INFO _commit_impl              Dummy-1   13:36:38 102.69761085510254     COMMIT
+     40794    20       INFO get_engine              Dummy-1   13:36:41 805.8733940124512 engine created
+     40794    20       INFO _execute_context              Dummy-1   13:36:41 811.3903999328613 select pg_catalog.version()
+     40794    20       INFO _execute_context              Dummy-1   13:36:41 811.6264343261719 [raw sql] {}
+     40794    20       INFO _execute_context              Dummy-1   13:36:41 812.1569156646729 select current_schema()
+     40794    20       INFO _execute_context              Dummy-1   13:36:41 812.2570514678955 [raw sql] {}
+     40794    20       INFO _execute_context              Dummy-1   13:36:41 812.5462532043457 show standard_conforming_strings
+     40794    20       INFO _execute_context              Dummy-1   13:36:41 812.5991821289062 [raw sql] {}
+     40794    20       INFO _begin_impl              Dummy-1   13:36:41 812.8132820129395 BEGIN (implicit)
+     40794    20       INFO _execute_context              Dummy-1   13:36:41 813.2660388946533 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     40794    20       INFO _execute_context              Dummy-1   13:36:41 813.3370876312256 [generated in 0.00012s] {'name': 'imdb_info_two'}
+     40794    20       INFO _commit_impl              Dummy-1   13:36:41 813.9059543609619     COMMIT
+     40812    20       INFO get_engine              Dummy-1   13:36:50 540.4877662658691 engine created
+     40812    20       INFO _execute_context              Dummy-1   13:36:50 545.2995300292969 select pg_catalog.version()
+     40812    20       INFO _execute_context              Dummy-1   13:36:50 545.4599857330322 [raw sql] {}
+     40812    20       INFO _execute_context              Dummy-1   13:36:50 545.8824634552002 select current_schema()
+     40812    20       INFO _execute_context              Dummy-1   13:36:50 545.9551811218262 [raw sql] {}
+     40812    20       INFO _execute_context              Dummy-1   13:36:50 546.2050437927246 show standard_conforming_strings
+     40812    20       INFO _execute_context              Dummy-1   13:36:50 546.2605953216553 [raw sql] {}
+     40812    20       INFO _begin_impl              Dummy-1   13:36:50 546.4739799499512 BEGIN (implicit)
+     40812    20       INFO _execute_context              Dummy-1   13:36:50 546.9260215759277 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     40812    20       INFO _execute_context              Dummy-1   13:36:50 547.0082759857178 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     40812    20       INFO _commit_impl              Dummy-1   13:36:50 547.5871562957764     COMMIT
+     40820    20       INFO get_engine              Dummy-1   13:36:53 219.7103500366211 engine created
+     40820    20       INFO _execute_context              Dummy-1   13:36:53 224.72715377807617 select pg_catalog.version()
+     40820    20       INFO _execute_context              Dummy-1   13:36:53 224.8704433441162 [raw sql] {}
+     40820    20       INFO _execute_context              Dummy-1   13:36:53 225.2786159515381 select current_schema()
+     40820    20       INFO _execute_context              Dummy-1   13:36:53 225.3708839416504 [raw sql] {}
+     40820    20       INFO _execute_context              Dummy-1   13:36:53 225.68535804748535 show standard_conforming_strings
+     40820    20       INFO _execute_context              Dummy-1   13:36:53 225.7542610168457 [raw sql] {}
+     40820    20       INFO _begin_impl              Dummy-1   13:36:53 225.9957790374756 BEGIN (implicit)
+     40820    20       INFO _execute_context              Dummy-1   13:36:53 226.46307945251465 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     40820    20       INFO _execute_context              Dummy-1   13:36:53 226.5491485595703 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     40820    20       INFO _commit_impl              Dummy-1   13:36:53 227.31781005859375     COMMIT
+     40826    20       INFO get_engine              Dummy-1   13:36:54 904.9022197723389 engine created
+     40826    20       INFO _execute_context              Dummy-1   13:36:54 910.7177257537842 select pg_catalog.version()
+     40826    20       INFO _execute_context              Dummy-1   13:36:54 910.8986854553223 [raw sql] {}
+     40826    20       INFO _execute_context              Dummy-1   13:36:54 911.4248752593994 select current_schema()
+     40826    20       INFO _execute_context              Dummy-1   13:36:54 911.5359783172607 [raw sql] {}
+     40826    20       INFO _execute_context              Dummy-1   13:36:54 911.9594097137451 show standard_conforming_strings
+     40826    20       INFO _execute_context              Dummy-1   13:36:54 912.0724201202393 [raw sql] {}
+     40826    20       INFO _begin_impl              Dummy-1   13:36:54 912.6136302947998 BEGIN (implicit)
+     40826    20       INFO _execute_context              Dummy-1   13:36:54 913.3355617523193 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     40826    20       INFO _execute_context              Dummy-1   13:36:54 913.5198593139648 [generated in 0.00025s] {'name': 'imdb_info_two'}
+     40826    20       INFO _commit_impl              Dummy-1   13:36:54 914.5469665527344     COMMIT
+     40953    20       INFO get_engine              Dummy-1   13:37:50 217.43154525756836 engine created
+     40953    20       INFO _execute_context              Dummy-1   13:37:50 222.3641872406006 select pg_catalog.version()
+     40953    20       INFO _execute_context              Dummy-1   13:37:50 222.49531745910645 [raw sql] {}
+     40953    20       INFO _execute_context              Dummy-1   13:37:50 222.86725044250488 select current_schema()
+     40953    20       INFO _execute_context              Dummy-1   13:37:50 222.93472290039062 [raw sql] {}
+     40953    20       INFO _execute_context              Dummy-1   13:37:50 223.2370376586914 show standard_conforming_strings
+     40953    20       INFO _execute_context              Dummy-1   13:37:50 223.32501411437988 [raw sql] {}
+     40953    20       INFO _begin_impl              Dummy-1   13:37:50 223.61445426940918 BEGIN (implicit)
+     40953    20       INFO _execute_context              Dummy-1   13:37:50 224.12443161010742 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     40953    20       INFO _execute_context              Dummy-1   13:37:50 224.26152229309082 [generated in 0.00019s] {'name': 'imdb_info_two'}
+     40953    20       INFO _commit_impl              Dummy-1   13:37:50 225.1565456390381     COMMIT
+     40969    20       INFO get_engine              Dummy-1   13:37:57 914.2742156982422 engine created
+     40969    20       INFO _execute_context              Dummy-1   13:37:57 919.0196990966797 select pg_catalog.version()
+     40969    20       INFO _execute_context              Dummy-1   13:37:57 919.1389083862305 [raw sql] {}
+     40969    20       INFO _execute_context              Dummy-1   13:37:57 919.5427894592285 select current_schema()
+     40969    20       INFO _execute_context              Dummy-1   13:37:57 919.6212291717529 [raw sql] {}
+     40969    20       INFO _execute_context              Dummy-1   13:37:57 919.9435710906982 show standard_conforming_strings
+     40969    20       INFO _execute_context              Dummy-1   13:37:57 920.0077056884766 [raw sql] {}
+     40969    20       INFO _begin_impl              Dummy-1   13:37:57 920.26686668396 BEGIN (implicit)
+     40969    20       INFO _execute_context              Dummy-1   13:37:57 920.7210540771484 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     40969    20       INFO _execute_context              Dummy-1   13:37:57 920.8004474639893 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     40969    20       INFO _commit_impl              Dummy-1   13:37:57 921.4222431182861     COMMIT
+     40988    20       INFO get_engine              Dummy-1   13:38:15 765.7239437103271 engine created
+     40988    20       INFO _execute_context              Dummy-1   13:38:15 770.6100940704346 select pg_catalog.version()
+     40988    20       INFO _execute_context              Dummy-1   13:38:15 770.7350254058838 [raw sql] {}
+     40988    20       INFO _execute_context              Dummy-1   13:38:15 771.0902690887451 select current_schema()
+     40988    20       INFO _execute_context              Dummy-1   13:38:15 771.1606025695801 [raw sql] {}
+     40988    20       INFO _execute_context              Dummy-1   13:38:15 771.4328765869141 show standard_conforming_strings
+     40988    20       INFO _execute_context              Dummy-1   13:38:15 771.4934349060059 [raw sql] {}
+     40988    20       INFO _begin_impl              Dummy-1   13:38:15 771.7161178588867 BEGIN (implicit)
+     40988    20       INFO _execute_context              Dummy-1   13:38:15 772.1872329711914 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     40988    20       INFO _execute_context              Dummy-1   13:38:15 772.2692489624023 [generated in 0.00014s] {'name': 'imdb_info_two'}
+     40988    20       INFO _commit_impl              Dummy-1   13:38:15 772.9601860046387     COMMIT
+     41211    20       INFO get_engine              Dummy-1   13:40:19 2.8388500213623047 engine created
+     41211    20       INFO _execute_context              Dummy-1   13:40:19 7.882833480834961 select pg_catalog.version()
+     41211    20       INFO _execute_context              Dummy-1   13:40:19 8.003950119018555 [raw sql] {}
+     41211    20       INFO _execute_context              Dummy-1   13:40:19 8.502006530761719 select current_schema()
+     41211    20       INFO _execute_context              Dummy-1   13:40:19 8.586406707763672 [raw sql] {}
+     41211    20       INFO _execute_context              Dummy-1   13:40:19 8.843660354614258 show standard_conforming_strings
+     41211    20       INFO _execute_context              Dummy-1   13:40:19 8.897542953491211 [raw sql] {}
+     41211    20       INFO _begin_impl              Dummy-1   13:40:19 9.09876823425293 BEGIN (implicit)
+     41211    20       INFO _execute_context              Dummy-1   13:40:19 9.54747200012207 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     41211    20       INFO _execute_context              Dummy-1   13:40:19 9.672403335571289 [generated in 0.00017s] {'name': 'imdb_info_two'}
+     41211    20       INFO _commit_impl              Dummy-1   13:40:19 10.418176651000977     COMMIT
+     41344    20       INFO get_engine              Dummy-1   13:40:59 282.49192237854004 engine created
+     41344    20       INFO _execute_context              Dummy-1   13:40:59 291.1195755004883 select pg_catalog.version()
+     41344    20       INFO _execute_context              Dummy-1   13:40:59 291.3191318511963 [raw sql] {}
+     41344    20       INFO _execute_context              Dummy-1   13:40:59 292.09303855895996 select current_schema()
+     41344    20       INFO _execute_context              Dummy-1   13:40:59 292.2060489654541 [raw sql] {}
+     41344    20       INFO _execute_context              Dummy-1   13:40:59 292.69886016845703 show standard_conforming_strings
+     41344    20       INFO _execute_context              Dummy-1   13:40:59 292.79613494873047 [raw sql] {}
+     41344    20       INFO _begin_impl              Dummy-1   13:40:59 293.1199073791504 BEGIN (implicit)
+     41344    20       INFO _execute_context              Dummy-1   13:40:59 293.806791305542 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     41344    20       INFO _execute_context              Dummy-1   13:40:59 293.92051696777344 [generated in 0.00018s] {'name': 'imdb_info_two'}
+     41344    20       INFO _commit_impl              Dummy-1   13:40:59 294.77763175964355     COMMIT
+     42016    20       INFO get_engine              Dummy-1   13:46:26 397.0646858215332 engine created
+     42016    20       INFO _execute_context              Dummy-1   13:46:26 402.6920795440674 select pg_catalog.version()
+     42016    20       INFO _execute_context              Dummy-1   13:46:26 402.84109115600586 [raw sql] {}
+     42016    20       INFO _execute_context              Dummy-1   13:46:26 403.1968116760254 select current_schema()
+     42016    20       INFO _execute_context              Dummy-1   13:46:26 403.26666831970215 [raw sql] {}
+     42016    20       INFO _execute_context              Dummy-1   13:46:26 403.5465717315674 show standard_conforming_strings
+     42016    20       INFO _execute_context              Dummy-1   13:46:26 403.60403060913086 [raw sql] {}
+     42016    20       INFO _begin_impl              Dummy-1   13:46:26 403.8233757019043 BEGIN (implicit)
+     42016    20       INFO _execute_context              Dummy-1   13:46:26 404.30307388305664 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     42016    20       INFO _execute_context              Dummy-1   13:46:26 404.38127517700195 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     42016    20       INFO _commit_impl              Dummy-1   13:46:26 405.0290584564209     COMMIT
+     42016    30    WARNING log_response             Thread-2   13:57:15 591.7654037475586 Not Found: /*
+     28685    20       INFO get_engine              Dummy-1   20:17:29 43.76649856567383 engine created
+     28685    20       INFO _execute_context              Dummy-1   20:17:29 69.68927383422852 select pg_catalog.version()
+     28685    20       INFO _execute_context              Dummy-1   20:17:29 69.9458122253418 [raw sql] {}
+     28685    20       INFO _execute_context              Dummy-1   20:17:29 71.0902214050293 select current_schema()
+     28685    20       INFO _execute_context              Dummy-1   20:17:29 71.27714157104492 [raw sql] {}
+     28685    20       INFO _execute_context              Dummy-1   20:17:29 72.09420204162598 show standard_conforming_strings
+     28685    20       INFO _execute_context              Dummy-1   20:17:29 72.24583625793457 [raw sql] {}
+     28685    20       INFO _begin_impl              Dummy-1   20:17:29 72.85690307617188 BEGIN (implicit)
+     28685    20       INFO _execute_context              Dummy-1   20:17:29 74.01347160339355 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     28685    20       INFO _execute_context              Dummy-1   20:17:29 74.19157028198242 [generated in 0.00029s] {'name': 'imdb_info_two'}
+     28685    20       INFO _commit_impl              Dummy-1   20:17:29 77.06522941589355     COMMIT
+     28763    20       INFO get_engine              Dummy-1   20:18:38 73.58551025390625 engine created
+     28763    20       INFO _execute_context              Dummy-1   20:18:38 81.28523826599121 select pg_catalog.version()
+     28763    20       INFO _execute_context              Dummy-1   20:18:38 81.47573471069336 [raw sql] {}
+     28763    20       INFO _execute_context              Dummy-1   20:18:38 82.4282169342041 select current_schema()
+     28763    20       INFO _execute_context              Dummy-1   20:18:38 82.57007598876953 [raw sql] {}
+     28763    20       INFO _execute_context              Dummy-1   20:18:38 83.11772346496582 show standard_conforming_strings
+     28763    20       INFO _execute_context              Dummy-1   20:18:38 83.19664001464844 [raw sql] {}
+     28763    20       INFO _begin_impl              Dummy-1   20:18:38 83.68372917175293 BEGIN (implicit)
+     28763    20       INFO _execute_context              Dummy-1   20:18:38 84.41710472106934 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     28763    20       INFO _execute_context              Dummy-1   20:18:38 84.55395698547363 [generated in 0.00020s] {'name': 'imdb_info_two'}
+     28763    20       INFO _commit_impl              Dummy-1   20:18:38 85.58201789855957     COMMIT
+     28811    20       INFO get_engine              Dummy-1   20:19:02 568.3605670928955 engine created
+     28811    20       INFO _execute_context              Dummy-1   20:19:02 576.4846801757812 select pg_catalog.version()
+     28811    20       INFO _execute_context              Dummy-1   20:19:02 576.6711235046387 [raw sql] {}
+     28811    20       INFO _execute_context              Dummy-1   20:19:02 577.2135257720947 select current_schema()
+     28811    20       INFO _execute_context              Dummy-1   20:19:02 577.3251056671143 [raw sql] {}
+     28811    20       INFO _execute_context              Dummy-1   20:19:02 577.7802467346191 show standard_conforming_strings
+     28811    20       INFO _execute_context              Dummy-1   20:19:02 577.8670310974121 [raw sql] {}
+     28811    20       INFO _begin_impl              Dummy-1   20:19:02 578.2105922698975 BEGIN (implicit)
+     28811    20       INFO _execute_context              Dummy-1   20:19:02 578.9225101470947 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     28811    20       INFO _execute_context              Dummy-1   20:19:02 579.017162322998 [generated in 0.00020s] {'name': 'imdb_info_two'}
+     28811    20       INFO _commit_impl              Dummy-1   20:19:02 580.1718235015869     COMMIT
+     28811    30    WARNING log_response             Thread-2   20:19:16 283.76054763793945 Not Found: /api/IMDBApp/home/view/
+     28811    30    WARNING log_response             Thread-2   20:19:16 372.0529079437256 Not Found: /favicon.ico
+     28811    20       INFO        get             Thread-3   20:21:59 729.1238307952881 session started
+     28811    20       INFO _begin_impl             Thread-3   20:21:59 731.4536571502686 BEGIN (implicit)
+     28811    20       INFO _execute_context             Thread-3   20:21:59 736.4583015441895 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     28811    20       INFO _execute_context             Thread-3   20:21:59 736.81640625 [generated in 0.00056s] {}
+     28811    10      DEBUG        get             Thread-3   20:21:59 923.6865043640137 ['Stanley Kubrick']
+     28811    20       INFO _commit_impl             Thread-3   20:21:59 924.0512847900391     COMMIT
+     28811    20       INFO        get             Thread-3   20:21:59 924.94797706604 session committed
+     28811    20       INFO        get             Thread-3   20:21:59 925.2827167510986 session closed
+     28811    20       INFO        get             Thread-3   20:22:00 53.85875701904297 session started
+     28811    20       INFO _begin_impl             Thread-3   20:22:00 54.82006072998047 BEGIN (implicit)
+     28811    20       INFO _execute_context             Thread-3   20:22:00 55.60302734375 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     28811    20       INFO _execute_context             Thread-3   20:22:00 55.87172508239746 [cached since 0.3196s ago] {}
+     28811    10      DEBUG        get             Thread-3   20:22:00 99.38836097717285 ['Stanley Kubrick']
+     28811    20       INFO _commit_impl             Thread-3   20:22:00 99.73692893981934     COMMIT
+     28811    20       INFO        get             Thread-3   20:22:00 100.48341751098633 session committed
+     28811    20       INFO        get             Thread-3   20:22:00 101.01103782653809 session closed
+     28811    20       INFO        get             Thread-4   20:22:10 305.00054359436035 session started
+     28811    20       INFO _begin_impl             Thread-4   20:22:10 305.5307865142822 BEGIN (implicit)
+     28811    20       INFO _execute_context             Thread-4   20:22:10 306.011438369751 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     28811    20       INFO _execute_context             Thread-4   20:22:10 306.1702251434326 [cached since 10.57s ago] {}
+     28811    10      DEBUG        get             Thread-4   20:22:10 352.001428604126 ['Stanley Kubrick']
+     28811    20       INFO _commit_impl             Thread-4   20:22:10 352.2975444793701     COMMIT
+     28811    20       INFO        get             Thread-4   20:22:10 352.977991104126 session committed
+     28811    20       INFO        get             Thread-4   20:22:10 353.4889221191406 session closed
+     28811    20       INFO        get             Thread-4   20:23:05 7.344722747802734 session started
+     28811    20       INFO _begin_impl             Thread-4   20:23:05 7.988929748535156 BEGIN (implicit)
+     28811    20       INFO _execute_context             Thread-4   20:23:05 8.457422256469727 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     28811    20       INFO _execute_context             Thread-4   20:23:05 8.612632751464844 [cached since 65.27s ago] {}
+     28811    10      DEBUG        get             Thread-4   20:23:05 51.74875259399414 ['Stanley Kubrick']
+     28811    20       INFO _commit_impl             Thread-4   20:23:05 51.9106388092041     COMMIT
+     28811    20       INFO        get             Thread-4   20:23:05 52.449941635131836 session committed
+     28811    20       INFO        get             Thread-4   20:23:05 52.71720886230469 session closed
+     28811    20       INFO        get             Thread-4   20:23:05 125.05245208740234 session started
+     28811    20       INFO _begin_impl             Thread-4   20:23:05 125.58722496032715 BEGIN (implicit)
+     28811    20       INFO _execute_context             Thread-4   20:23:05 125.9162425994873 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     28811    20       INFO _execute_context             Thread-4   20:23:05 126.03926658630371 [cached since 65.39s ago] {}
+     28811    10      DEBUG        get             Thread-4   20:23:05 168.92337799072266 ['Stanley Kubrick']
+     28811    20       INFO _commit_impl             Thread-4   20:23:05 169.12412643432617     COMMIT
+     28811    20       INFO        get             Thread-4   20:23:05 169.55232620239258 session committed
+     28811    20       INFO        get             Thread-4   20:23:05 170.29762268066406 session closed
+     29145    20       INFO get_engine              Dummy-1   20:23:15 553.8759231567383 engine created
+     29145    20       INFO _execute_context              Dummy-1   20:23:15 563.7955665588379 select pg_catalog.version()
+     29145    20       INFO _execute_context              Dummy-1   20:23:15 564.0969276428223 [raw sql] {}
+     29145    20       INFO _execute_context              Dummy-1   20:23:15 565.0756359100342 select current_schema()
+     29145    20       INFO _execute_context              Dummy-1   20:23:15 565.2511119842529 [raw sql] {}
+     29145    20       INFO _execute_context              Dummy-1   20:23:15 566.3423538208008 show standard_conforming_strings
+     29145    20       INFO _execute_context              Dummy-1   20:23:15 566.5328502655029 [raw sql] {}
+     29145    20       INFO _begin_impl              Dummy-1   20:23:15 567.1286582946777 BEGIN (implicit)
+     29145    20       INFO _execute_context              Dummy-1   20:23:15 568.0906772613525 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29145    20       INFO _execute_context              Dummy-1   20:23:15 568.2845115661621 [generated in 0.00031s] {'name': 'imdb_info_two'}
+     29145    20       INFO _commit_impl              Dummy-1   20:23:15 569.7553157806396     COMMIT
+     29231    20       INFO get_engine              Dummy-1   20:24:41 597.4686145782471 engine created
+     29231    20       INFO _execute_context              Dummy-1   20:24:41 605.4320335388184 select pg_catalog.version()
+     29231    20       INFO _execute_context              Dummy-1   20:24:41 605.6420803070068 [raw sql] {}
+     29231    20       INFO _execute_context              Dummy-1   20:24:41 606.4531803131104 select current_schema()
+     29231    20       INFO _execute_context              Dummy-1   20:24:41 606.5683364868164 [raw sql] {}
+     29231    20       INFO _execute_context              Dummy-1   20:24:41 607.1434020996094 show standard_conforming_strings
+     29231    20       INFO _execute_context              Dummy-1   20:24:41 607.2475910186768 [raw sql] {}
+     29231    20       INFO _begin_impl              Dummy-1   20:24:41 607.6552867889404 BEGIN (implicit)
+     29231    20       INFO _execute_context              Dummy-1   20:24:41 608.4070205688477 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29231    20       INFO _execute_context              Dummy-1   20:24:41 608.522891998291 [generated in 0.00021s] {'name': 'imdb_info_two'}
+     29231    20       INFO _commit_impl              Dummy-1   20:24:41 609.4794273376465     COMMIT
+     29231    40      ERROR log_response             Thread-2   20:24:50 332.60560035705566 Internal Server Error: /api/IMDBApp/get/director/with/max/number/of/movies/
+Traceback (most recent call last):
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/IMDBApp/views.py", line 75, in _wrapper
+    print('_fun() ---> ', _fun())
+TypeError: get() missing 2 required positional arguments: 'self' and 'request'
+     29282    20       INFO get_engine              Dummy-1   20:25:03 477.4155616760254 engine created
+     29282    20       INFO _execute_context              Dummy-1   20:25:03 485.6724739074707 select pg_catalog.version()
+     29282    20       INFO _execute_context              Dummy-1   20:25:03 485.89515686035156 [raw sql] {}
+     29282    20       INFO _execute_context              Dummy-1   20:25:03 486.68742179870605 select current_schema()
+     29282    20       INFO _execute_context              Dummy-1   20:25:03 486.7849349975586 [raw sql] {}
+     29282    20       INFO _execute_context              Dummy-1   20:25:03 487.1807098388672 show standard_conforming_strings
+     29282    20       INFO _execute_context              Dummy-1   20:25:03 487.2558116912842 [raw sql] {}
+     29282    20       INFO _begin_impl              Dummy-1   20:25:03 487.5445365905762 BEGIN (implicit)
+     29282    20       INFO _execute_context              Dummy-1   20:25:03 488.2810115814209 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29282    20       INFO _execute_context              Dummy-1   20:25:03 488.37924003601074 [generated in 0.00017s] {'name': 'imdb_info_two'}
+     29282    20       INFO _commit_impl              Dummy-1   20:25:03 489.31360244750977     COMMIT
+     29289    20       INFO get_engine              Dummy-1   20:25:09 832.8514099121094 engine created
+     29289    20       INFO _execute_context              Dummy-1   20:25:09 844.6393013000488 select pg_catalog.version()
+     29289    20       INFO _execute_context              Dummy-1   20:25:09 844.9933528900146 [raw sql] {}
+     29289    20       INFO _execute_context              Dummy-1   20:25:09 846.2743759155273 select current_schema()
+     29289    20       INFO _execute_context              Dummy-1   20:25:09 846.566915512085 [raw sql] {}
+     29289    20       INFO _execute_context              Dummy-1   20:25:09 847.6009368896484 show standard_conforming_strings
+     29289    20       INFO _execute_context              Dummy-1   20:25:09 847.8024005889893 [raw sql] {}
+     29289    20       INFO _begin_impl              Dummy-1   20:25:09 848.4635353088379 BEGIN (implicit)
+     29289    20       INFO _execute_context              Dummy-1   20:25:09 849.7121334075928 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29289    20       INFO _execute_context              Dummy-1   20:25:09 849.9577045440674 [generated in 0.00038s] {'name': 'imdb_info_two'}
+     29289    20       INFO _commit_impl              Dummy-1   20:25:09 851.6845703125     COMMIT
+     29297    20       INFO get_engine              Dummy-1   20:25:12 735.1863384246826 engine created
+     29297    20       INFO _execute_context              Dummy-1   20:25:12 746.1512088775635 select pg_catalog.version()
+     29297    20       INFO _execute_context              Dummy-1   20:25:12 746.4044094085693 [raw sql] {}
+     29297    20       INFO _execute_context              Dummy-1   20:25:12 747.3714351654053 select current_schema()
+     29297    20       INFO _execute_context              Dummy-1   20:25:12 747.6818561553955 [raw sql] {}
+     29297    20       INFO _execute_context              Dummy-1   20:25:12 748.7895488739014 show standard_conforming_strings
+     29297    20       INFO _execute_context              Dummy-1   20:25:12 749.051570892334 [raw sql] {}
+     29297    20       INFO _begin_impl              Dummy-1   20:25:12 750.0448226928711 BEGIN (implicit)
+     29297    20       INFO _execute_context              Dummy-1   20:25:12 751.2528896331787 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29297    20       INFO _execute_context              Dummy-1   20:25:12 751.4748573303223 [generated in 0.00038s] {'name': 'imdb_info_two'}
+     29297    20       INFO _commit_impl              Dummy-1   20:25:12 753.0908584594727     COMMIT
+     29314    20       INFO get_engine              Dummy-1   20:25:40 910.590410232544 engine created
+     29314    20       INFO _execute_context              Dummy-1   20:25:40 920.640230178833 select pg_catalog.version()
+     29314    20       INFO _execute_context              Dummy-1   20:25:40 920.9015369415283 [raw sql] {}
+     29314    20       INFO _execute_context              Dummy-1   20:25:40 921.8547344207764 select current_schema()
+     29314    20       INFO _execute_context              Dummy-1   20:25:40 922.1251010894775 [raw sql] {}
+     29314    20       INFO _execute_context              Dummy-1   20:25:40 923.1812953948975 show standard_conforming_strings
+     29314    20       INFO _execute_context              Dummy-1   20:25:40 923.3798980712891 [raw sql] {}
+     29314    20       INFO _begin_impl              Dummy-1   20:25:40 924.0624904632568 BEGIN (implicit)
+     29314    20       INFO _execute_context              Dummy-1   20:25:40 925.1813888549805 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29314    20       INFO _execute_context              Dummy-1   20:25:40 925.358772277832 [generated in 0.00034s] {'name': 'imdb_info_two'}
+     29314    20       INFO _commit_impl              Dummy-1   20:25:40 926.9225597381592     COMMIT
+     29314    20       INFO        get             Thread-2   20:25:44 141.38245582580566 session started
+     29314    20       INFO _begin_impl             Thread-2   20:25:44 143.31483840942383 BEGIN (implicit)
+     29314    20       INFO _execute_context             Thread-2   20:25:44 145.80750465393066 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     29314    20       INFO _execute_context             Thread-2   20:25:44 145.95651626586914 [generated in 0.00025s] {}
+     29314    10      DEBUG        get             Thread-2   20:25:44 187.8960132598877 ['Stanley Kubrick']
+     29314    20       INFO _commit_impl             Thread-2   20:25:44 188.1392002105713     COMMIT
+     29314    20       INFO        get             Thread-2   20:25:44 188.79437446594238 session committed
+     29314    20       INFO        get             Thread-2   20:25:44 189.12863731384277 session closed
+     29633    20       INFO get_engine              Dummy-1   20:32:34 655.8668613433838 engine created
+     29633    20       INFO _execute_context              Dummy-1   20:32:34 666.999340057373 select pg_catalog.version()
+     29633    20       INFO _execute_context              Dummy-1   20:32:34 667.2554016113281 [raw sql] {}
+     29633    20       INFO _execute_context              Dummy-1   20:32:34 668.0824756622314 select current_schema()
+     29633    20       INFO _execute_context              Dummy-1   20:32:34 668.2634353637695 [raw sql] {}
+     29633    20       INFO _execute_context              Dummy-1   20:32:34 669.0976619720459 show standard_conforming_strings
+     29633    20       INFO _execute_context              Dummy-1   20:32:34 669.2681312561035 [raw sql] {}
+     29633    20       INFO _begin_impl              Dummy-1   20:32:34 670.0284481048584 BEGIN (implicit)
+     29633    20       INFO _execute_context              Dummy-1   20:32:34 671.2403297424316 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29633    20       INFO _execute_context              Dummy-1   20:32:34 671.5247631072998 [generated in 0.00042s] {'name': 'imdb_info_two'}
+     29633    20       INFO _commit_impl              Dummy-1   20:32:34 672.9462146759033     COMMIT
+     29652    20       INFO get_engine              Dummy-1   20:32:42 814.3830299377441 engine created
+     29652    20       INFO _execute_context              Dummy-1   20:32:42 825.1709938049316 select pg_catalog.version()
+     29652    20       INFO _execute_context              Dummy-1   20:32:42 825.3915309906006 [raw sql] {}
+     29652    20       INFO _execute_context              Dummy-1   20:32:42 826.4791965484619 select current_schema()
+     29652    20       INFO _execute_context              Dummy-1   20:32:42 826.6894817352295 [raw sql] {}
+     29652    20       INFO _execute_context              Dummy-1   20:32:42 827.4774551391602 show standard_conforming_strings
+     29652    20       INFO _execute_context              Dummy-1   20:32:42 827.6529312133789 [raw sql] {}
+     29652    20       INFO _begin_impl              Dummy-1   20:32:42 828.1493186950684 BEGIN (implicit)
+     29652    20       INFO _execute_context              Dummy-1   20:32:42 829.0879726409912 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29652    20       INFO _execute_context              Dummy-1   20:32:42 829.2450904846191 [generated in 0.00028s] {'name': 'imdb_info_two'}
+     29652    20       INFO _commit_impl              Dummy-1   20:32:42 830.8744430541992     COMMIT
+     29750    20       INFO get_engine              Dummy-1   20:34:03 958.06884765625 engine created
+     29750    20       INFO _execute_context              Dummy-1   20:34:03 967.22412109375 select pg_catalog.version()
+     29750    20       INFO _execute_context              Dummy-1   20:34:03 967.4205780029297 [raw sql] {}
+     29750    20       INFO _execute_context              Dummy-1   20:34:03 968.0581092834473 select current_schema()
+     29750    20       INFO _execute_context              Dummy-1   20:34:03 968.1868553161621 [raw sql] {}
+     29750    20       INFO _execute_context              Dummy-1   20:34:03 968.712329864502 show standard_conforming_strings
+     29750    20       INFO _execute_context              Dummy-1   20:34:03 968.8310623168945 [raw sql] {}
+     29750    20       INFO _begin_impl              Dummy-1   20:34:03 969.2811965942383 BEGIN (implicit)
+     29750    20       INFO _execute_context              Dummy-1   20:34:03 970.2305793762207 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29750    20       INFO _execute_context              Dummy-1   20:34:03 970.388650894165 [generated in 0.00028s] {'name': 'imdb_info_two'}
+     29750    20       INFO _commit_impl              Dummy-1   20:34:03 971.7903137207031     COMMIT
+     29764    20       INFO get_engine              Dummy-1   20:34:23 958.4388732910156 engine created
+     29764    20       INFO _execute_context              Dummy-1   20:34:23 966.357946395874 select pg_catalog.version()
+     29764    20       INFO _execute_context              Dummy-1   20:34:23 966.7165279388428 [raw sql] {}
+     29764    20       INFO _execute_context              Dummy-1   20:34:23 967.3812389373779 select current_schema()
+     29764    20       INFO _execute_context              Dummy-1   20:34:23 967.5159454345703 [raw sql] {}
+     29764    20       INFO _execute_context              Dummy-1   20:34:23 967.9760932922363 show standard_conforming_strings
+     29764    20       INFO _execute_context              Dummy-1   20:34:23 968.0688381195068 [raw sql] {}
+     29764    20       INFO _begin_impl              Dummy-1   20:34:23 968.4360027313232 BEGIN (implicit)
+     29764    20       INFO _execute_context              Dummy-1   20:34:23 969.1801071166992 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29764    20       INFO _execute_context              Dummy-1   20:34:23 969.2919254302979 [generated in 0.00019s] {'name': 'imdb_info_two'}
+     29764    20       INFO _commit_impl              Dummy-1   20:34:23 970.5250263214111     COMMIT
+     29820    20       INFO get_engine              Dummy-1   20:35:36 561.6555213928223 engine created
+     29820    20       INFO _execute_context              Dummy-1   20:35:36 569.5712566375732 select pg_catalog.version()
+     29820    20       INFO _execute_context              Dummy-1   20:35:36 569.7743892669678 [raw sql] {}
+     29820    20       INFO _execute_context              Dummy-1   20:35:36 570.4643726348877 select current_schema()
+     29820    20       INFO _execute_context              Dummy-1   20:35:36 570.5661773681641 [raw sql] {}
+     29820    20       INFO _execute_context              Dummy-1   20:35:36 571.0413455963135 show standard_conforming_strings
+     29820    20       INFO _execute_context              Dummy-1   20:35:36 571.1538791656494 [raw sql] {}
+     29820    20       INFO _begin_impl              Dummy-1   20:35:36 571.4693069458008 BEGIN (implicit)
+     29820    20       INFO _execute_context              Dummy-1   20:35:36 572.1480846405029 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29820    20       INFO _execute_context              Dummy-1   20:35:36 572.260856628418 [generated in 0.00018s] {'name': 'imdb_info_two'}
+     29820    20       INFO _commit_impl              Dummy-1   20:35:36 573.0998516082764     COMMIT
+     29826    20       INFO get_engine              Dummy-1   20:35:40 247.71380424499512 engine created
+     29826    20       INFO _execute_context              Dummy-1   20:35:40 255.73325157165527 select pg_catalog.version()
+     29826    20       INFO _execute_context              Dummy-1   20:35:40 255.92541694641113 [raw sql] {}
+     29826    20       INFO _execute_context              Dummy-1   20:35:40 256.3920021057129 select current_schema()
+     29826    20       INFO _execute_context              Dummy-1   20:35:40 256.52146339416504 [raw sql] {}
+     29826    20       INFO _execute_context              Dummy-1   20:35:40 257.07244873046875 show standard_conforming_strings
+     29826    20       INFO _execute_context              Dummy-1   20:35:40 257.15160369873047 [raw sql] {}
+     29826    20       INFO _begin_impl              Dummy-1   20:35:40 257.71093368530273 BEGIN (implicit)
+     29826    20       INFO _execute_context              Dummy-1   20:35:40 258.47578048706055 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29826    20       INFO _execute_context              Dummy-1   20:35:40 258.5618495941162 [generated in 0.00018s] {'name': 'imdb_info_two'}
+     29826    20       INFO _commit_impl              Dummy-1   20:35:40 259.65309143066406     COMMIT
+     29826    40      ERROR log_response             Thread-2   20:35:51 749.4351863861084 Internal Server Error: /api/IMDBApp/get/director/with/max/number/of/movies/
+Traceback (most recent call last):
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/imdb-venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/IMDBApp/views.py", line 86, in _wrapper
+    _LOGIN_URL = '&'.join(LOGIN_URL.split('&')[: : -1][1: ][: : -1] + ('http://127.0.0.1:8000/api/IMDBApp/%s' % API_name))
+TypeError: can only concatenate list (not "str") to list
+     29884    20       INFO get_engine              Dummy-1   20:36:30 843.0557250976562 engine created
+     29884    20       INFO _execute_context              Dummy-1   20:36:30 851.0901927947998 select pg_catalog.version()
+     29884    20       INFO _execute_context              Dummy-1   20:36:30 851.2353897094727 [raw sql] {}
+     29884    20       INFO _execute_context              Dummy-1   20:36:30 851.7417907714844 select current_schema()
+     29884    20       INFO _execute_context              Dummy-1   20:36:30 851.8416881561279 [raw sql] {}
+     29884    20       INFO _execute_context              Dummy-1   20:36:30 852.215051651001 show standard_conforming_strings
+     29884    20       INFO _execute_context              Dummy-1   20:36:30 852.318286895752 [raw sql] {}
+     29884    20       INFO _begin_impl              Dummy-1   20:36:30 852.6268005371094 BEGIN (implicit)
+     29884    20       INFO _execute_context              Dummy-1   20:36:30 853.2748222351074 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29884    20       INFO _execute_context              Dummy-1   20:36:30 853.3787727355957 [generated in 0.00018s] {'name': 'imdb_info_two'}
+     29884    20       INFO _commit_impl              Dummy-1   20:36:30 854.3574810028076     COMMIT
+     29889    20       INFO get_engine              Dummy-1   20:36:33 838.6995792388916 engine created
+     29889    20       INFO _execute_context              Dummy-1   20:36:33 849.5442867279053 select pg_catalog.version()
+     29889    20       INFO _execute_context              Dummy-1   20:36:33 849.7622013092041 [raw sql] {}
+     29889    20       INFO _execute_context              Dummy-1   20:36:33 850.8923053741455 select current_schema()
+     29889    20       INFO _execute_context              Dummy-1   20:36:33 851.081371307373 [raw sql] {}
+     29889    20       INFO _execute_context              Dummy-1   20:36:33 851.7446517944336 show standard_conforming_strings
+     29889    20       INFO _execute_context              Dummy-1   20:36:33 851.8800735473633 [raw sql] {}
+     29889    20       INFO _begin_impl              Dummy-1   20:36:33 852.3919582366943 BEGIN (implicit)
+     29889    20       INFO _execute_context              Dummy-1   20:36:33 853.3110618591309 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29889    20       INFO _execute_context              Dummy-1   20:36:33 853.4348011016846 [generated in 0.00025s] {'name': 'imdb_info_two'}
+     29889    20       INFO _commit_impl              Dummy-1   20:36:33 854.6967506408691     COMMIT
+     29948    20       INFO get_engine              Dummy-1   20:37:07 142.35758781433105 engine created
+     29948    20       INFO _execute_context              Dummy-1   20:37:07 150.38204193115234 select pg_catalog.version()
+     29948    20       INFO _execute_context              Dummy-1   20:37:07 150.55274963378906 [raw sql] {}
+     29948    20       INFO _execute_context              Dummy-1   20:37:07 151.15785598754883 select current_schema()
+     29948    20       INFO _execute_context              Dummy-1   20:37:07 151.2761116027832 [raw sql] {}
+     29948    20       INFO _execute_context              Dummy-1   20:37:07 151.69954299926758 show standard_conforming_strings
+     29948    20       INFO _execute_context              Dummy-1   20:37:07 151.78370475769043 [raw sql] {}
+     29948    20       INFO _begin_impl              Dummy-1   20:37:07 152.1162986755371 BEGIN (implicit)
+     29948    20       INFO _execute_context              Dummy-1   20:37:07 152.88758277893066 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     29948    20       INFO _execute_context              Dummy-1   20:37:07 153.08499336242676 [generated in 0.00027s] {'name': 'imdb_info_two'}
+     29948    20       INFO _commit_impl              Dummy-1   20:37:07 154.65474128723145     COMMIT
+     30032    20       INFO get_engine              Dummy-1   20:38:15 789.595365524292 engine created
+     30032    20       INFO _execute_context              Dummy-1   20:38:15 796.8511581420898 select pg_catalog.version()
+     30032    20       INFO _execute_context              Dummy-1   20:38:15 797.032356262207 [raw sql] {}
+     30032    20       INFO _execute_context              Dummy-1   20:38:15 797.5866794586182 select current_schema()
+     30032    20       INFO _execute_context              Dummy-1   20:38:15 797.6827621459961 [raw sql] {}
+     30032    20       INFO _execute_context              Dummy-1   20:38:15 798.1774806976318 show standard_conforming_strings
+     30032    20       INFO _execute_context              Dummy-1   20:38:15 798.2637882232666 [raw sql] {}
+     30032    20       INFO _begin_impl              Dummy-1   20:38:15 798.5966205596924 BEGIN (implicit)
+     30032    20       INFO _execute_context              Dummy-1   20:38:15 799.3521690368652 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     30032    20       INFO _execute_context              Dummy-1   20:38:15 799.4401454925537 [generated in 0.00019s] {'name': 'imdb_info_two'}
+     30032    20       INFO _commit_impl              Dummy-1   20:38:15 800.382137298584     COMMIT
+     30044    20       INFO get_engine              Dummy-1   20:38:28 972.2356796264648 engine created
+     30044    20       INFO _execute_context              Dummy-1   20:38:28 983.6945533752441 select pg_catalog.version()
+     30044    20       INFO _execute_context              Dummy-1   20:38:28 983.9844703674316 [raw sql] {}
+     30044    20       INFO _execute_context              Dummy-1   20:38:28 984.9019050598145 select current_schema()
+     30044    20       INFO _execute_context              Dummy-1   20:38:28 985.1000308990479 [raw sql] {}
+     30044    20       INFO _execute_context              Dummy-1   20:38:28 985.9919548034668 show standard_conforming_strings
+     30044    20       INFO _execute_context              Dummy-1   20:38:28 986.2105846405029 [raw sql] {}
+     30044    20       INFO _begin_impl              Dummy-1   20:38:28 986.8502616882324 BEGIN (implicit)
+     30044    20       INFO _execute_context              Dummy-1   20:38:28 987.8437519073486 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     30044    20       INFO _execute_context              Dummy-1   20:38:28 988.0797863006592 [generated in 0.00034s] {'name': 'imdb_info_two'}
+     30044    20       INFO _commit_impl              Dummy-1   20:38:28 989.7723197937012     COMMIT
+     30134    20       INFO get_engine              Dummy-1   20:39:57 965.0664329528809 engine created
+     30134    20       INFO _execute_context              Dummy-1   20:39:57 976.3543605804443 select pg_catalog.version()
+     30134    20       INFO _execute_context              Dummy-1   20:39:57 976.6759872436523 [raw sql] {}
+     30134    20       INFO _execute_context              Dummy-1   20:39:57 977.8728485107422 select current_schema()
+     30134    20       INFO _execute_context              Dummy-1   20:39:57 978.1842231750488 [raw sql] {}
+     30134    20       INFO _execute_context              Dummy-1   20:39:57 979.4759750366211 show standard_conforming_strings
+     30134    20       INFO _execute_context              Dummy-1   20:39:57 979.6981811523438 [raw sql] {}
+     30134    20       INFO _begin_impl              Dummy-1   20:39:57 980.3867340087891 BEGIN (implicit)
+     30134    20       INFO _execute_context              Dummy-1   20:39:57 981.539249420166 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     30134    20       INFO _execute_context              Dummy-1   20:39:57 981.7569255828857 [generated in 0.00037s] {'name': 'imdb_info_two'}
+     30134    20       INFO _commit_impl              Dummy-1   20:39:57 983.3469390869141     COMMIT
+     30134    30    WARNING log_response             Thread-2   20:40:43 375.25343894958496 Not Found: /api/IMDBApp/home/view/
+     30134    30    WARNING log_response             Thread-2   20:40:43 455.57522773742676 Not Found: /favicon.ico
+     30442    20       INFO get_engine              Dummy-1   20:45:57 77.06046104431152 engine created
+     30442    20       INFO _execute_context              Dummy-1   20:45:57 82.16357231140137 select pg_catalog.version()
+     30442    20       INFO _execute_context              Dummy-1   20:45:57 82.40175247192383 [raw sql] {}
+     30442    20       INFO _execute_context              Dummy-1   20:45:57 83.01496505737305 select current_schema()
+     30442    20       INFO _execute_context              Dummy-1   20:45:57 83.14108848571777 [raw sql] {}
+     30442    20       INFO _execute_context              Dummy-1   20:45:57 83.59098434448242 show standard_conforming_strings
+     30442    20       INFO _execute_context              Dummy-1   20:45:57 83.68825912475586 [raw sql] {}
+     30442    20       INFO _begin_impl              Dummy-1   20:45:57 84.03325080871582 BEGIN (implicit)
+     30442    20       INFO _execute_context              Dummy-1   20:45:57 84.67841148376465 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     30442    20       INFO _execute_context              Dummy-1   20:45:57 84.81121063232422 [generated in 0.00021s] {'name': 'imdb_info_two'}
+     30442    20       INFO _commit_impl              Dummy-1   20:45:57 85.85524559020996     COMMIT
+     30871    20       INFO get_engine              Dummy-1   20:53:33 139.0688419342041 engine created
+     30871    20       INFO _execute_context              Dummy-1   20:53:33 144.06776428222656 select pg_catalog.version()
+     30871    20       INFO _execute_context              Dummy-1   20:53:33 144.19960975646973 [raw sql] {}
+     30871    20       INFO _execute_context              Dummy-1   20:53:33 144.56415176391602 select current_schema()
+     30871    20       INFO _execute_context              Dummy-1   20:53:33 144.62924003601074 [raw sql] {}
+     30871    20       INFO _execute_context              Dummy-1   20:53:33 144.90151405334473 show standard_conforming_strings
+     30871    20       INFO _execute_context              Dummy-1   20:53:33 144.9582576751709 [raw sql] {}
+     30871    20       INFO _begin_impl              Dummy-1   20:53:33 145.1582908630371 BEGIN (implicit)
+     30871    20       INFO _execute_context              Dummy-1   20:53:33 145.61820030212402 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     30871    20       INFO _execute_context              Dummy-1   20:53:33 145.7045078277588 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     30871    20       INFO _commit_impl              Dummy-1   20:53:33 146.2714672088623     COMMIT
+     30871    20       INFO        get             Thread-2   20:53:59 229.60257530212402 session started
+     30871    20       INFO _begin_impl             Thread-2   20:53:59 232.09524154663086 BEGIN (implicit)
+     30871    20       INFO _execute_context             Thread-2   20:53:59 235.26453971862793 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     30871    20       INFO _execute_context             Thread-2   20:53:59 235.50987243652344 [generated in 0.00038s] {}
+     30871    10      DEBUG        get             Thread-2   20:53:59 387.5126838684082 ['Stanley Kubrick']
+     30871    20       INFO _commit_impl             Thread-2   20:53:59 387.6924514770508     COMMIT
+     30871    20       INFO        get             Thread-2   20:53:59 388.0419731140137 session committed
+     30871    20       INFO        get             Thread-2   20:53:59 388.2565498352051 session closed
+     30871    20       INFO        get             Thread-2   20:53:59 490.6141757965088 session started
+     30871    20       INFO _begin_impl             Thread-2   20:53:59 491.0707473754883 BEGIN (implicit)
+     30871    20       INFO _execute_context             Thread-2   20:53:59 491.40357971191406 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     30871    20       INFO _execute_context             Thread-2   20:53:59 491.4987087249756 [cached since 0.2564s ago] {}
+     30871    10      DEBUG        get             Thread-2   20:53:59 512.9885673522949 ['Stanley Kubrick']
+     30871    20       INFO _commit_impl             Thread-2   20:53:59 513.4057998657227     COMMIT
+     30871    20       INFO        get             Thread-2   20:53:59 514.4798755645752 session committed
+     30871    20       INFO        get             Thread-2   20:53:59 515.2428150177002 session closed
+     30952    20       INFO get_engine              Dummy-1   20:54:04 878.0746459960938 engine created
+     30952    20       INFO _execute_context              Dummy-1   20:54:04 884.3798637390137 select pg_catalog.version()
+     30952    20       INFO _execute_context              Dummy-1   20:54:04 884.5562934875488 [raw sql] {}
+     30952    20       INFO _execute_context              Dummy-1   20:54:04 885.0736618041992 select current_schema()
+     30952    20       INFO _execute_context              Dummy-1   20:54:04 885.1683139801025 [raw sql] {}
+     30952    20       INFO _execute_context              Dummy-1   20:54:04 885.545015335083 show standard_conforming_strings
+     30952    20       INFO _execute_context              Dummy-1   20:54:04 885.6182098388672 [raw sql] {}
+     30952    20       INFO _begin_impl              Dummy-1   20:54:04 885.918140411377 BEGIN (implicit)
+     30952    20       INFO _execute_context              Dummy-1   20:54:04 886.4974975585938 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     30952    20       INFO _execute_context              Dummy-1   20:54:04 886.5973949432373 [generated in 0.00016s] {'name': 'imdb_info_two'}
+     30952    20       INFO _commit_impl              Dummy-1   20:54:04 887.4645233154297     COMMIT
+     30952    20       INFO        get             Thread-2   20:54:07 1.6658306121826172 session started
+     30952    20       INFO _begin_impl             Thread-2   20:54:07 3.476381301879883 BEGIN (implicit)
+     30952    20       INFO _execute_context             Thread-2   20:54:07 5.406618118286133 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     30952    20       INFO _execute_context             Thread-2   20:54:07 5.611181259155273 [generated in 0.00027s] {}
+     30952    10      DEBUG        get             Thread-2   20:54:07 27.102947235107422 ['Stanley Kubrick']
+     30952    20       INFO _commit_impl             Thread-2   20:54:07 27.285099029541016     COMMIT
+     30952    20       INFO        get             Thread-2   20:54:07 27.637243270874023 session committed
+     30952    20       INFO        get             Thread-2   20:54:07 27.841567993164062 session closed
+     30973    20       INFO get_engine              Dummy-1   20:54:36 814.2502307891846 engine created
+     30973    20       INFO _execute_context              Dummy-1   20:54:36 819.2720413208008 select pg_catalog.version()
+     30973    20       INFO _execute_context              Dummy-1   20:54:36 819.4015026092529 [raw sql] {}
+     30973    20       INFO _execute_context              Dummy-1   20:54:36 819.7534084320068 select current_schema()
+     30973    20       INFO _execute_context              Dummy-1   20:54:36 819.8204040527344 [raw sql] {}
+     30973    20       INFO _execute_context              Dummy-1   20:54:36 820.0883865356445 show standard_conforming_strings
+     30973    20       INFO _execute_context              Dummy-1   20:54:36 820.1484680175781 [raw sql] {}
+     30973    20       INFO _begin_impl              Dummy-1   20:54:36 820.3945159912109 BEGIN (implicit)
+     30973    20       INFO _execute_context              Dummy-1   20:54:36 820.8627700805664 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     30973    20       INFO _execute_context              Dummy-1   20:54:36 820.9390640258789 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     30973    20       INFO _commit_impl              Dummy-1   20:54:36 821.5341567993164     COMMIT
+     30973    20       INFO        get             Thread-2   20:54:59 319.26798820495605 session started
+     30973    20       INFO _begin_impl             Thread-2   20:54:59 320.21331787109375 BEGIN (implicit)
+     30973    20       INFO _execute_context             Thread-2   20:54:59 321.7148780822754 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     30973    20       INFO _execute_context             Thread-2   20:54:59 321.8350410461426 [generated in 0.00024s] {}
+     30973    10      DEBUG        get             Thread-2   20:54:59 343.97101402282715 ['Stanley Kubrick']
+     30973    20       INFO _commit_impl             Thread-2   20:54:59 344.22922134399414     COMMIT
+     30973    20       INFO        get             Thread-2   20:54:59 344.8512554168701 session committed
+     30973    20       INFO        get             Thread-2   20:54:59 345.19362449645996 session closed
+     30973    20       INFO        get             Thread-2   20:56:32 631.3586235046387 session started
+     30973    20       INFO _begin_impl             Thread-2   20:56:32 631.7636966705322 BEGIN (implicit)
+     30973    20       INFO _execute_context             Thread-2   20:56:32 632.0388317108154 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     30973    20       INFO _execute_context             Thread-2   20:56:32 632.1630477905273 [cached since 93.31s ago] {}
+     30973    10      DEBUG        get             Thread-2   20:56:32 656.4571857452393 ['Stanley Kubrick']
+     30973    20       INFO _commit_impl             Thread-2   20:56:32 656.5990447998047     COMMIT
+     30973    20       INFO        get             Thread-2   20:56:32 656.9671630859375 session committed
+     30973    20       INFO        get             Thread-2   20:56:32 657.172679901123 session closed
+     30973    20       INFO        get             Thread-2   20:57:44 168.79582405090332 session started
+     30973    20       INFO _begin_impl             Thread-2   20:57:44 169.59118843078613 BEGIN (implicit)
+     30973    20       INFO _execute_context             Thread-2   20:57:44 170.2280044555664 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     30973    20       INFO _execute_context             Thread-2   20:57:44 170.37391662597656 [cached since 164.8s ago] {}
+     30973    10      DEBUG        get             Thread-2   20:57:44 197.32189178466797 ['Stanley Kubrick']
+     30973    20       INFO _commit_impl             Thread-2   20:57:44 197.4797248840332     COMMIT
+     30973    20       INFO        get             Thread-2   20:57:44 198.14705848693848 session committed
+     30973    20       INFO        get             Thread-2   20:57:44 198.34089279174805 session closed
+     32499    20       INFO get_engine              Dummy-1   21:25:29 363.31701278686523 engine created
+     32499    20       INFO _execute_context              Dummy-1   21:25:29 374.96304512023926 select pg_catalog.version()
+     32499    20       INFO _execute_context              Dummy-1   21:25:29 375.2298355102539 [raw sql] {}
+     32499    20       INFO _execute_context              Dummy-1   21:25:29 376.07741355895996 select current_schema()
+     32499    20       INFO _execute_context              Dummy-1   21:25:29 376.2385845184326 [raw sql] {}
+     32499    20       INFO _execute_context              Dummy-1   21:25:29 376.9042491912842 show standard_conforming_strings
+     32499    20       INFO _execute_context              Dummy-1   21:25:29 377.0489692687988 [raw sql] {}
+     32499    20       INFO _begin_impl              Dummy-1   21:25:29 377.6724338531494 BEGIN (implicit)
+     32499    20       INFO _execute_context              Dummy-1   21:25:29 378.74579429626465 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     32499    20       INFO _execute_context              Dummy-1   21:25:29 378.91411781311035 [generated in 0.00028s] {'name': 'imdb_info_two'}
+     32499    20       INFO _commit_impl              Dummy-1   21:25:29 380.3095817565918     COMMIT
+     32499    20       INFO        get             Thread-2   21:26:20 999.0534782409668 session started
+     32499    20       INFO _begin_impl             Thread-2   21:26:21 0.278472900390625 BEGIN (implicit)
+     32499    20       INFO _execute_context             Thread-2   21:26:21 1.9617080688476562 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     32499    20       INFO _execute_context             Thread-2   21:26:21 2.0990371704101562 [generated in 0.00020s] {}
+     32499    10      DEBUG        get             Thread-2   21:26:21 26.823997497558594 ['Stanley Kubrick']
+     32499    20       INFO _commit_impl             Thread-2   21:26:21 27.027606964111328     COMMIT
+     32499    20       INFO        get             Thread-2   21:26:21 27.49466896057129 session committed
+     32499    20       INFO        get             Thread-2   21:26:21 27.727842330932617 session closed
+     32622    20       INFO get_engine              Dummy-1   21:27:08 926.1875152587891 engine created
+     32622    20       INFO _execute_context              Dummy-1   21:27:08 931.37526512146 select pg_catalog.version()
+     32622    20       INFO _execute_context              Dummy-1   21:27:08 931.4959049224854 [raw sql] {}
+     32622    20       INFO _execute_context              Dummy-1   21:27:08 931.8118095397949 select current_schema()
+     32622    20       INFO _execute_context              Dummy-1   21:27:08 931.8728446960449 [raw sql] {}
+     32622    20       INFO _execute_context              Dummy-1   21:27:08 932.1088790893555 show standard_conforming_strings
+     32622    20       INFO _execute_context              Dummy-1   21:27:08 932.1608543395996 [raw sql] {}
+     32622    20       INFO _begin_impl              Dummy-1   21:27:08 932.3587417602539 BEGIN (implicit)
+     32622    20       INFO _execute_context              Dummy-1   21:27:08 932.7964782714844 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     32622    20       INFO _execute_context              Dummy-1   21:27:08 932.8708648681641 [generated in 0.00012s] {'name': 'imdb_info_two'}
+     32622    20       INFO _commit_impl              Dummy-1   21:27:08 933.4268569946289     COMMIT
+     32622    20       INFO        get             Thread-2   21:27:32 291.6421890258789 session started
+     32622    20       INFO _begin_impl             Thread-2   21:27:32 292.9108142852783 BEGIN (implicit)
+     32622    20       INFO _execute_context             Thread-2   21:27:32 294.51608657836914 SELECT imdb_info_two._id AS imdb_info_two__id, imdb_info_two.popularity AS imdb_info_two_popularity, imdb_info_two.director AS imdb_info_two_director, imdb_info_two.genre AS imdb_info_two_genre, imdb_info_two.imdb_score AS imdb_info_two_imdb_score, imdb_info_two.name AS imdb_info_two_name 
+FROM imdb_info_two
+     32622    20       INFO _execute_context             Thread-2   21:27:32 294.66772079467773 [generated in 0.00020s] {}
+     32622    10      DEBUG        get             Thread-2   21:27:32 321.2127685546875 ['Stanley Kubrick']
+     32622    20       INFO _commit_impl             Thread-2   21:27:32 321.3639259338379     COMMIT
+     32622    20       INFO        get             Thread-2   21:27:32 321.7020034790039 session committed
+     32622    20       INFO        get             Thread-2   21:27:32 321.86388969421387 session closed
+     32790    20       INFO get_engine              Dummy-1   21:30:50 487.52427101135254 engine created
+     32790    20       INFO _execute_context              Dummy-1   21:30:50 492.0041561126709 select pg_catalog.version()
+     32790    20       INFO _execute_context              Dummy-1   21:30:50 492.1605587005615 [raw sql] {}
+     32790    20       INFO _execute_context              Dummy-1   21:30:50 492.51294136047363 select current_schema()
+     32790    20       INFO _execute_context              Dummy-1   21:30:50 492.5799369812012 [raw sql] {}
+     32790    20       INFO _execute_context              Dummy-1   21:30:50 492.86627769470215 show standard_conforming_strings
+     32790    20       INFO _execute_context              Dummy-1   21:30:50 492.9234981536865 [raw sql] {}
+     32790    20       INFO _begin_impl              Dummy-1   21:30:50 493.17193031311035 BEGIN (implicit)
+     32790    20       INFO _execute_context              Dummy-1   21:30:50 493.671178817749 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     32790    20       INFO _execute_context              Dummy-1   21:30:50 493.776798248291 [generated in 0.00019s] {'name': 'imdb_info_two'}
+     32790    20       INFO _commit_impl              Dummy-1   21:30:50 494.35901641845703     COMMIT
+     32790    30    WARNING log_response             Thread-2   21:30:56 372.96080589294434 Not Found: /api/IMDBApp/home/view/
+     32840    20       INFO get_engine              Dummy-1   21:31:06 751.0950565338135 engine created
+     32840    20       INFO _execute_context              Dummy-1   21:31:06 756.9293975830078 select pg_catalog.version()
+     32840    20       INFO _execute_context              Dummy-1   21:31:06 757.075309753418 [raw sql] {}
+     32840    20       INFO _execute_context              Dummy-1   21:31:06 757.5240135192871 select current_schema()
+     32840    20       INFO _execute_context              Dummy-1   21:31:06 757.6355934143066 [raw sql] {}
+     32840    20       INFO _execute_context              Dummy-1   21:31:06 758.0511569976807 show standard_conforming_strings
+     32840    20       INFO _execute_context              Dummy-1   21:31:06 758.1312656402588 [raw sql] {}
+     32840    20       INFO _begin_impl              Dummy-1   21:31:06 758.4085464477539 BEGIN (implicit)
+     32840    20       INFO _execute_context              Dummy-1   21:31:06 759.0105533599854 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     32840    20       INFO _execute_context              Dummy-1   21:31:06 759.1161727905273 [generated in 0.00017s] {'name': 'imdb_info_two'}
+     32840    20       INFO _commit_impl              Dummy-1   21:31:06 759.9151134490967     COMMIT
+     32840    30    WARNING log_response             Thread-2   21:31:10 907.7441692352295 Not Found: /api/IMDBApp/home/view/
+     32859    20       INFO get_engine              Dummy-1   21:31:23 615.8545017242432 engine created
+     32859    20       INFO _execute_context              Dummy-1   21:31:23 623.582124710083 select pg_catalog.version()
+     32859    20       INFO _execute_context              Dummy-1   21:31:23 623.7461566925049 [raw sql] {}
+     32859    20       INFO _execute_context              Dummy-1   21:31:23 624.2661476135254 select current_schema()
+     32859    20       INFO _execute_context              Dummy-1   21:31:23 624.3653297424316 [raw sql] {}
+     32859    20       INFO _execute_context              Dummy-1   21:31:23 624.7298717498779 show standard_conforming_strings
+     32859    20       INFO _execute_context              Dummy-1   21:31:23 624.8214244842529 [raw sql] {}
+     32859    20       INFO _begin_impl              Dummy-1   21:31:23 625.0653266906738 BEGIN (implicit)
+     32859    20       INFO _execute_context              Dummy-1   21:31:23 625.7007122039795 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     32859    20       INFO _execute_context              Dummy-1   21:31:23 625.8020401000977 [generated in 0.00016s] {'name': 'imdb_info_two'}
+     32859    20       INFO _commit_impl              Dummy-1   21:31:23 626.6429424285889     COMMIT
+     32859    30    WARNING log_response             Thread-2   21:31:43 18.976688385009766 Not Found: /api/IMDBApp/home/view/
+     32924    20       INFO get_engine              Dummy-1   21:32:22 878.5412311553955 engine created
+     32924    20       INFO _execute_context              Dummy-1   21:32:22 883.6796283721924 select pg_catalog.version()
+     32924    20       INFO _execute_context              Dummy-1   21:32:22 883.8090896606445 [raw sql] {}
+     32924    20       INFO _execute_context              Dummy-1   21:32:22 884.2241764068604 select current_schema()
+     32924    20       INFO _execute_context              Dummy-1   21:32:22 884.2883110046387 [raw sql] {}
+     32924    20       INFO _execute_context              Dummy-1   21:32:22 884.5844268798828 show standard_conforming_strings
+     32924    20       INFO _execute_context              Dummy-1   21:32:22 884.6480846405029 [raw sql] {}
+     32924    20       INFO _begin_impl              Dummy-1   21:32:22 884.9363327026367 BEGIN (implicit)
+     32924    20       INFO _execute_context              Dummy-1   21:32:22 885.4515552520752 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     32924    20       INFO _execute_context              Dummy-1   21:32:22 885.5581283569336 [generated in 0.00016s] {'name': 'imdb_info_two'}
+     32924    20       INFO _commit_impl              Dummy-1   21:32:22 886.5292072296143     COMMIT
+     32930    20       INFO get_engine              Dummy-1   21:32:26 461.23695373535156 engine created
+     32930    20       INFO _execute_context              Dummy-1   21:32:26 466.6142463684082 select pg_catalog.version()
+     32930    20       INFO _execute_context              Dummy-1   21:32:26 466.7782783508301 [raw sql] {}
+     32930    20       INFO _execute_context              Dummy-1   21:32:26 467.27633476257324 select current_schema()
+     32930    20       INFO _execute_context              Dummy-1   21:32:26 467.3924446105957 [raw sql] {}
+     32930    20       INFO _execute_context              Dummy-1   21:32:26 467.9985046386719 show standard_conforming_strings
+     32930    20       INFO _execute_context              Dummy-1   21:32:26 468.08719635009766 [raw sql] {}
+     32930    20       INFO _begin_impl              Dummy-1   21:32:26 468.49679946899414 BEGIN (implicit)
+     32930    20       INFO _execute_context              Dummy-1   21:32:26 469.2208766937256 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     32930    20       INFO _execute_context              Dummy-1   21:32:26 469.3565368652344 [generated in 0.00021s] {'name': 'imdb_info_two'}
+     32930    20       INFO _commit_impl              Dummy-1   21:32:26 470.37410736083984     COMMIT
+     32988    20       INFO get_engine              Dummy-1   21:33:00 414.39080238342285 engine created
+     32988    20       INFO _execute_context              Dummy-1   21:33:00 419.6920394897461 select pg_catalog.version()
+     32988    20       INFO _execute_context              Dummy-1   21:33:00 419.81959342956543 [raw sql] {}
+     32988    20       INFO _execute_context              Dummy-1   21:33:00 420.1474189758301 select current_schema()
+     32988    20       INFO _execute_context              Dummy-1   21:33:00 420.2086925506592 [raw sql] {}
+     32988    20       INFO _execute_context              Dummy-1   21:33:00 420.45116424560547 show standard_conforming_strings
+     32988    20       INFO _execute_context              Dummy-1   21:33:00 420.5012321472168 [raw sql] {}
+     32988    20       INFO _begin_impl              Dummy-1   21:33:00 420.717716217041 BEGIN (implicit)
+     32988    20       INFO _execute_context              Dummy-1   21:33:00 421.1618900299072 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     32988    20       INFO _execute_context              Dummy-1   21:33:00 421.22411727905273 [generated in 0.00011s] {'name': 'imdb_info_two'}
+     32988    20       INFO _commit_impl              Dummy-1   21:33:00 421.7867851257324     COMMIT
+     32995    20       INFO get_engine              Dummy-1   21:33:04 982.0356369018555 engine created
+     32995    20       INFO _execute_context              Dummy-1   21:33:04 986.7520332336426 select pg_catalog.version()
+     32995    20       INFO _execute_context              Dummy-1   21:33:04 986.9098663330078 [raw sql] {}
+     32995    20       INFO _execute_context              Dummy-1   21:33:04 987.3025417327881 select current_schema()
+     32995    20       INFO _execute_context              Dummy-1   21:33:04 987.3902797698975 [raw sql] {}
+     32995    20       INFO _execute_context              Dummy-1   21:33:04 987.6773357391357 show standard_conforming_strings
+     32995    20       INFO _execute_context              Dummy-1   21:33:04 987.7393245697021 [raw sql] {}
+     32995    20       INFO _begin_impl              Dummy-1   21:33:04 987.9574775695801 BEGIN (implicit)
+     32995    20       INFO _execute_context              Dummy-1   21:33:04 988.4085655212402 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     32995    20       INFO _execute_context              Dummy-1   21:33:04 988.4774684906006 [generated in 0.00012s] {'name': 'imdb_info_two'}
+     32995    20       INFO _commit_impl              Dummy-1   21:33:04 989.0241622924805     COMMIT
+     33058    20       INFO get_engine              Dummy-1   21:33:56 175.2912998199463 engine created
+     33058    20       INFO _execute_context              Dummy-1   21:33:56 182.4498176574707 select pg_catalog.version()
+     33058    20       INFO _execute_context              Dummy-1   21:33:56 182.64174461364746 [raw sql] {}
+     33058    20       INFO _execute_context              Dummy-1   21:33:56 183.14695358276367 select current_schema()
+     33058    20       INFO _execute_context              Dummy-1   21:33:56 183.22992324829102 [raw sql] {}
+     33058    20       INFO _execute_context              Dummy-1   21:33:56 183.6075782775879 show standard_conforming_strings
+     33058    20       INFO _execute_context              Dummy-1   21:33:56 183.69078636169434 [raw sql] {}
+     33058    20       INFO _begin_impl              Dummy-1   21:33:56 184.0384006500244 BEGIN (implicit)
+     33058    20       INFO _execute_context              Dummy-1   21:33:56 184.71097946166992 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     33058    20       INFO _execute_context              Dummy-1   21:33:56 184.83281135559082 [generated in 0.00019s] {'name': 'imdb_info_two'}
+     33058    20       INFO _commit_impl              Dummy-1   21:33:56 185.84203720092773     COMMIT
+     33118    20       INFO get_engine              Dummy-1   21:34:31 173.69604110717773 engine created
+     33118    20       INFO _execute_context              Dummy-1   21:34:31 178.49326133728027 select pg_catalog.version()
+     33118    20       INFO _execute_context              Dummy-1   21:34:31 178.61700057983398 [raw sql] {}
+     33118    20       INFO _execute_context              Dummy-1   21:34:31 178.99203300476074 select current_schema()
+     33118    20       INFO _execute_context              Dummy-1   21:34:31 179.0633201599121 [raw sql] {}
+     33118    20       INFO _execute_context              Dummy-1   21:34:31 179.38590049743652 show standard_conforming_strings
+     33118    20       INFO _execute_context              Dummy-1   21:34:31 179.4455051422119 [raw sql] {}
+     33118    20       INFO _begin_impl              Dummy-1   21:34:31 179.69965934753418 BEGIN (implicit)
+     33118    20       INFO _execute_context              Dummy-1   21:34:31 180.18817901611328 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     33118    20       INFO _execute_context              Dummy-1   21:34:31 180.26971817016602 [generated in 0.00013s] {'name': 'imdb_info_two'}
+     33118    20       INFO _commit_impl              Dummy-1   21:34:31 180.88912963867188     COMMIT
+     33118    30    WARNING log_response             Thread-2   21:34:37 48.157691955566406 Not Found: /api/IMDBApp/*
+     33132    20       INFO get_engine              Dummy-1   21:34:44 394.24705505371094 engine created
+     33132    20       INFO _execute_context              Dummy-1   21:34:44 400.58016777038574 select pg_catalog.version()
+     33132    20       INFO _execute_context              Dummy-1   21:34:44 400.7570743560791 [raw sql] {}
+     33132    20       INFO _execute_context              Dummy-1   21:34:44 401.256799697876 select current_schema()
+     33132    20       INFO _execute_context              Dummy-1   21:34:44 401.3826847076416 [raw sql] {}
+     33132    20       INFO _execute_context              Dummy-1   21:34:44 401.7937183380127 show standard_conforming_strings
+     33132    20       INFO _execute_context              Dummy-1   21:34:44 401.87907218933105 [raw sql] {}
+     33132    20       INFO _begin_impl              Dummy-1   21:34:44 402.16732025146484 BEGIN (implicit)
+     33132    20       INFO _execute_context              Dummy-1   21:34:44 402.7431011199951 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     33132    20       INFO _execute_context              Dummy-1   21:34:44 402.85491943359375 [generated in 0.00017s] {'name': 'imdb_info_two'}
+     33132    20       INFO _commit_impl              Dummy-1   21:34:44 403.6843776702881     COMMIT
+     33132    30    WARNING log_response             Thread-2   21:34:47 562.999963760376 Not Found: /api/IMDBApp/*
+     33200    20       INFO get_engine              Dummy-1   21:35:50 805.8078289031982 engine created
+     33200    20       INFO _execute_context              Dummy-1   21:35:50 810.8031749725342 select pg_catalog.version()
+     33200    20       INFO _execute_context              Dummy-1   21:35:50 810.9269142150879 [raw sql] {}
+     33200    20       INFO _execute_context              Dummy-1   21:35:50 811.2502098083496 select current_schema()
+     33200    20       INFO _execute_context              Dummy-1   21:35:50 811.3152980804443 [raw sql] {}
+     33200    20       INFO _execute_context              Dummy-1   21:35:50 811.5549087524414 show standard_conforming_strings
+     33200    20       INFO _execute_context              Dummy-1   21:35:50 811.6075992584229 [raw sql] {}
+     33200    20       INFO _begin_impl              Dummy-1   21:35:50 811.8324279785156 BEGIN (implicit)
+     33200    20       INFO _execute_context              Dummy-1   21:35:50 812.2806549072266 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     33200    20       INFO _execute_context              Dummy-1   21:35:50 812.3533725738525 [generated in 0.00012s] {'name': 'imdb_info_two'}
+     33200    20       INFO _commit_impl              Dummy-1   21:35:50 812.9184246063232     COMMIT
+     33244    20       INFO get_engine              Dummy-1   21:36:06 554.1369915008545 engine created
+     33244    20       INFO _execute_context              Dummy-1   21:36:06 561.0291957855225 select pg_catalog.version()
+     33244    20       INFO _execute_context              Dummy-1   21:36:06 561.1789226531982 [raw sql] {}
+     33244    20       INFO _execute_context              Dummy-1   21:36:06 561.6743564605713 select current_schema()
+     33244    20       INFO _execute_context              Dummy-1   21:36:06 561.7794990539551 [raw sql] {}
+     33244    20       INFO _execute_context              Dummy-1   21:36:06 562.2661113739014 show standard_conforming_strings
+     33244    20       INFO _execute_context              Dummy-1   21:36:06 562.3621940612793 [raw sql] {}
+     33244    20       INFO _begin_impl              Dummy-1   21:36:06 562.6633167266846 BEGIN (implicit)
+     33244    20       INFO _execute_context              Dummy-1   21:36:06 563.2903575897217 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     33244    20       INFO _execute_context              Dummy-1   21:36:06 563.39430809021 [generated in 0.00017s] {'name': 'imdb_info_two'}
+     33244    20       INFO _commit_impl              Dummy-1   21:36:06 564.2116069793701     COMMIT
+     33244    30    WARNING log_response             Thread-2   21:36:42 446.09665870666504 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg
+     33244    30    WARNING log_response             Thread-2   21:36:42 467.543363571167 Not Found: /favicon.ico
+     33314    20       INFO get_engine              Dummy-1   21:37:15 174.78299140930176 engine created
+     33314    20       INFO _execute_context              Dummy-1   21:37:15 180.3901195526123 select pg_catalog.version()
+     33314    20       INFO _execute_context              Dummy-1   21:37:15 180.52124977111816 [raw sql] {}
+     33314    20       INFO _execute_context              Dummy-1   21:37:15 180.86838722229004 select current_schema()
+     33314    20       INFO _execute_context              Dummy-1   21:37:15 180.93609809875488 [raw sql] {}
+     33314    20       INFO _execute_context              Dummy-1   21:37:15 181.19072914123535 show standard_conforming_strings
+     33314    20       INFO _execute_context              Dummy-1   21:37:15 181.2436580657959 [raw sql] {}
+     33314    20       INFO _begin_impl              Dummy-1   21:37:15 181.46657943725586 BEGIN (implicit)
+     33314    20       INFO _execute_context              Dummy-1   21:37:15 182.09171295166016 select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+     33314    20       INFO _execute_context              Dummy-1   21:37:15 182.1768283843994 [generated in 0.00014s] {'name': 'imdb_info_two'}
+     33314    20       INFO _commit_impl              Dummy-1   21:37:15 182.78741836547852     COMMIT
+     33314    30    WARNING log_response             Thread-2   21:37:17 665.0104522705078 Not Found: /home/nikhilmanvesh/IMDB-Django-SQLAlchemy-Favicon/src/static/favicon-32x32.jpg

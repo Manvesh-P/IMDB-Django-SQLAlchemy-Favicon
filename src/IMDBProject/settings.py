@@ -31,6 +31,20 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# INSTALLED_APPS = [
+#     'django.contrib.admin',
+#     'django.contrib.auth',
+#     'django.contrib.contenttypes',
+#     'django.contrib.sessions',
+#     'django.contrib.messages',
+#     'django.contrib.staticfiles',
+
+#     # 'bossoidc', 
+#     # 'djangooidc', 
+#     'IMDBApp', 
+#     # 'social_django'
+# ]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,7 +56,7 @@ INSTALLED_APPS = [
     # 'bossoidc', 
     # 'djangooidc', 
     'IMDBApp', 
-    # 'social_django'
+    'social_django'
 ]
 
 
@@ -53,6 +67,12 @@ INSTALLED_APPS = [
 
 # AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend', 
 #                            'bossoidc.backend.OpenIdConnectBackend')
+
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2', 
+    'django_keycloak.auth.backends.KeycloakAuthorizationCodeBackend',
+)
 
 # # auth_uri = 'http://127.0.0.1:8080/auth/realms/myrealm'
 # # auth_uri = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth'
@@ -68,10 +88,22 @@ INSTALLED_APPS = [
 # LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/get_token/'
 # LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/api/IMDBApp/get_token/'
 # LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/'
-# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/api/IMDBApp/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/api/IMDBApp/*'
 # LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/'
+# LOGIN_URL = 'https://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/tfai-ocr/protocol/openid-connect/auth?client_id=techforce-ocr-client&response_type=code&redirect_uri=http://127.0.0.1:8000/'
+
 # LOGIN_REDIRECT_URL = ''   
 LOGIN_URL = 'http://127.0.0.1:8080/realms/myrealm/protocol/openid-connect/auth?client_id=manvesh&response_type=code&redirect_uri=http://127.0.0.1:8000/api/IMDBApp/home/view/'
+
+
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/tfai-ocr/protocol/openid-connect/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/tfai-ocr/protocol/openid-connect/auth/'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/tfai-ocr/protocol/openid-connect/auth?client_id=techforce-ocr-client'
+# LOGIN_URL = 'http://127.0.0.1:8080/auth/realms/tfai-ocr/protocol/openid-connect/auth?client_id=techforce-ocr-client&response_mode=fragment&response_type=code&scope=openid'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/tfai-ocr/protocol/openid-connect/auth?client_id=techforce-ocr-client&response_mode=fragment&response_type=code&scope=openid'
+# LOGIN_URL = 'http://127.0.0.1:8080/realms/tfai-ocr/protocol/openid-connect/auth?client_id=techforce-ocr-client&response_mode=fragment&response_type=code&scope=openid&redirect_uri=http://127.0.0.1:8000/*'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -85,6 +117,25 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'IMDBProject.urls'
 
+# TEMPLATES = [
+#     {
+#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+#         'DIRS': [os.path.join(BASE_DIR, 'templates/'),],
+#         'APP_DIRS': True,
+#         'OPTIONS': {
+#             'context_processors': [
+#                 'django.template.context_processors.debug',
+#                 'django.template.context_processors.request',
+#                 'django.contrib.auth.context_processors.auth',
+#                 'django.contrib.messages.context_processors.messages',
+
+#                 # 'social_django.context_processors.backends', 
+#                 # 'social_django.context_processors.login_redirect'
+#             ],
+#         },
+#     },
+# ]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -95,16 +146,19 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+                'django.contrib.messages.context_processors.messages', 
 
-                # 'social_django.context_processors.backends', 
-                # 'social_django.context_processors.login_redirect'
+                'social_django.context_processors.backends', 
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'IMDBProject.wsgi.application'
+
+
+KEYCLOAK_OIDC_PROFILE_MODEL = 'django_keycloak.OpenIdConnectProfile'
 
 
 # Database
